@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .profile {
+            display: flex;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            justify-content: center;
+            align-items: center;
+        }
+        .profile img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        .profile h2 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .profile p {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- You can set the number of rows dynamically -->
+        <!-- For example, if you want 3 rows -->
+        <div class="row">
+            <div class="profile">
+                <img src="profile1.jpg" alt="Profile 1">
+                <h2>Name 1</h2>
+                <p>Position 1</p>
+            </div>
+            <div class="profile">
+                <img src="profile2.jpg" alt="Profile 2">
+                <h2>Name 2</h2>
+                <p>Position 2</p>
+            </div>
+            <div class="profile">
+                <img src="profile3.jpg" alt="Profile 3">
+                <h2>Name 3</h2>
+                <p>Position 3</p>
+            </div>
+        </div>
+
+        <!-- Repeat the above row structure based on the number of rows you want -->
+
+    </div>
+</body>
+</html>

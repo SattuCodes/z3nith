@@ -1,0 +1,6 @@
+.start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(70vh - 110px);
+}
