@@ -138,14 +138,14 @@
             </div>
             <div class="profile">
                 <img src="" alt="Profile 1">
-                <h2>Aditi Gupta</h2>
-                <p>Event Lead (Uncover)</p>
+                <h2>Satyam Tiwari</h2>
+                <p>☠️💀☠️ idk</p>
                 <p class="des">Des</p> 
             </div>
             <div class="profile">
                 <img src="" alt="Profile 1">
-                <h2>Satyam Kumar</h2>
-                <p>Event Lead (Frame By Frame)</p>
+                <h2>Aditi Gupta</h2>
+                <p>Event Lead (Uncover)</p>
                 <p class="des">Des</p> 
             </div>
         </div>
