@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Z3NITH'24</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
         @import url('https://fonts.cdnfonts.com/css/source-serif-pro');
@@ -13,16 +13,17 @@
         }
         .container {
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 30px 85px;
             padding: 0 20px;
         }
         .row {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
+            gap: 360px;
         }
         .profile {
-            padding: 60px 60px;
+            padding: 60px;
             display: flex;
             flex-direction: column;
             background-color: #ffffff;
@@ -32,8 +33,8 @@
             align-items: center;
         }
         .profile img {
-            width: 120px;
-            height: 120px;
+            width: 210px;
+            height: 210px;
             object-fit: cover;
             border-radius: 50%;
         }
@@ -51,8 +52,9 @@
     </style>
 </head>
 <body>
+    <?php include 'navigation.html'?>
     <div class="container">
-        <div class="row">
+        <div class="row" style="margin-top: 140px">
             <div class="profile">
                 <img src="asset/img/bhavya.jpg" alt="Profile 1">
                 <h2>Bhavya Dhariwal</h2>
