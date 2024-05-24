@@ -20,10 +20,12 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
-            gap: 360px;
+            gap: 20px;
         }
         .profile {
-            padding: 60px;
+            width: 350px;
+            height: 350px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             background-color: #ffffff;
@@ -33,8 +35,8 @@
             align-items: center;
         }
         .profile img {
-            width: 210px;
-            height: 210px;
+            width: 200px; 
+            height: 200px;]
             object-fit: cover;
             border-radius: 50%;
         }
@@ -43,18 +45,20 @@
             font-size: 18px;
             font-family: 'Source Serif Pro', sans-serif;
             font-weight: 600;
+            text-align: center;
         }
         .profile p {
             margin-top: 5px;
             font-size: 14px;
             font-family: "Lato", sans-serif;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <?php include 'navigation.html'?>
     <div class="container">
-        <div class="row" style="margin-top: 140px">
+        <div class="row" style="margin-top: 170px">
             <div class="profile">
                 <img src="asset/img/bhavya.jpg" alt="Profile 1">
                 <h2>Bhavya Dhariwal</h2>
