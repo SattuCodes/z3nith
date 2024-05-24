@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z3NITH'24</title>
+    <link rel="icon" type="image/x-icon" href="asset/img/unnamed (1) (1).png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
         @import url('https://fonts.cdnfonts.com/css/source-serif-pro');
@@ -161,7 +162,7 @@
                 font-size: 15px;
             }
         }
-        @media and screen and (max-width: 1045px) {
+        @media only screen and (max-width: 1045px) {
             .profile {
                 width: 185px;
                 height: 185px;
