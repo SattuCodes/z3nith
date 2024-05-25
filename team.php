@@ -50,7 +50,7 @@
         .profile h2 {
             margin-top: 20px;
             font-size: 25px;
-            font-family: 'Source Serif Pro', sans-serif;
+            font-family: 'Source Serif Pro';
             font-weight: 600;
             text-align: center;
         }

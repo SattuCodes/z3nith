@@ -64,7 +64,7 @@
 }
 
 .image {
-    min-height: 42vh;
+    min-height: 400px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -226,43 +226,33 @@
     .click img{
         width: 400px;
     }
+    
 }
 @media only screen and (max-width: 1600px) {
     .click img{
         width: 350px;
+        height: 225px;
+    }
+    .image{
+        min-height: 350px;
     }
 }
 @media only screen and (max-width: 1500px) {
     .click img{
-        width: 280px;
+        width: 300px;
+        height: 170px;
     }
-    #i12{
-        object-fit: fill !important;
+    .image{
+        min-height: 270px;
     }
 }
 @media only screen and (max-width: 1400px) and (max-height: 730px){
     .click img{
         width: 230px;
+        height: 130px;
     }
-    #i12{
-        object-fit: fill !important;
-    }
-}
-@media only screen and (max-width: 1300px) {
-    .click img{
-        width: 200px;
-    }
-    #i12{
-        object-fit: fill !important;
-    }
-}
-@media only screen and (max-width: 1200px) {
-    .click img{
-        width: 180px;
-        height: 120px;
-    }
-    #i12{
-        object-fit: fill !important;
+    .image{
+        min-height: 200px;
     }
 }
     </style>
