@@ -139,7 +139,7 @@
     }
 
     .image {
-        min-height: 190px;
+        min-height: 153px;
         scroll-snap-align: center;
         padding: 0;
         margin: 0;
@@ -240,7 +240,7 @@
         object-fit: fill !important;
     }
 }
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1400px) and (max-height: 730px){
     .click img{
         width: 230px;
     }
@@ -259,19 +259,10 @@
 @media only screen and (max-width: 1200px) {
     .click img{
         width: 180px;
+        height: 120px;
     }
     #i12{
         object-fit: fill !important;
-    }
-}
-@media only screen and (max-height: 730px){
-    .click img{
-        width: 400px;
-    }
-}
-@media only screen and (max-height: 630px){
-    .click img{
-        width: 350px;
     }
 }
     </style>
