@@ -124,6 +124,26 @@
                 font-size: 17px;
             }
         }
+        @media only screen and (max-width: 1370px){
+            .profile {
+                width: 260px;
+                height: 260px;
+            }
+            .profile img{
+                height: 110px;
+                width: 110px;
+            }
+            .profile h2{
+                font-size: 18.5px;
+            }
+            .profile .des{
+                font-size: 14.5px;
+            }
+            .profile p{
+                font-size: 17.5px;
+            }
+        }
+
         @media only screen and (max-width: 1270px){
             .profile {
                 width: 250px;

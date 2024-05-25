@@ -54,8 +54,8 @@
 }
 
 .click img {
-    height: 29vh;
-    width: 50vh;
+    height: 264px;
+    width: 455px;
     margin-bottom: 10px;
     cursor: pointer;
     direction: ltr;
@@ -222,6 +222,58 @@
         margin: 0;
     }
 }
+@media only screen and (max-width: 1700px) {
+    .click img{
+        width: 400px;
+    }
+}
+@media only screen and (max-width: 1600px) {
+    .click img{
+        width: 350px;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .click img{
+        width: 280px;
+    }
+    #i12{
+        object-fit: fill !important;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .click img{
+        width: 230px;
+    }
+    #i12{
+        object-fit: fill !important;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .click img{
+        width: 200px;
+    }
+    #i12{
+        object-fit: fill !important;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .click img{
+        width: 180px;
+    }
+    #i12{
+        object-fit: fill !important;
+    }
+}
+@media only screen and (max-height: 730px){
+    .click img{
+        width: 400px;
+    }
+}
+@media only screen and (max-height: 630px){
+    .click img{
+        width: 350px;
+    }
+}
     </style>
 </head>
 <body>
@@ -244,7 +296,7 @@
                 <span>Z3NITH'23 | Teaser</span>
             </div>
             <div class="image" data-video="https://www.youtube.com/embed/VROaUIA-ACs">
-                <img src="asset/img/teaser22.png" alt="">
+                <img id="i12" src="asset/img/teaser22.png" alt="">
                 <span>Z3NITH'22 | Trailer</span>
             </div>
             <div class="image" data-video="https://www.youtube.com/embed/5Vc6nkNHsyA">
@@ -260,19 +312,19 @@
                 <span>Z3NITH'20 | Trailer</span>
             </div>
             <div class="image" data-video="https://www.youtube.com/embed/95kbdhlDFdE">
-                <img src="asset/img/z19.png" alt="">
+                <img src="asset/img/z19.png" alt="" style="object-fit: fill;">
                 <span>Z3NITH'19 | Trailer</span>
             </div>
             <div class="image" data-video="https://www.youtube.com/embed/JjguhXUWHds">
-                <img src="asset/img/z18.jpg" alt="">
+                <img src="asset/img/z18.jpg" alt="" style="object-fit: fill;">
                 <span>Z3NITH'18 | Trailer</span>
             </div>
             <div class="image" data-video="https://www.youtube.com/embed/V608MMmU0Tk">
-                <img src="asset/img/z17.png" alt="">
+                <img src="asset/img/z17.png" alt="" style="object-fit: fill;">
                 <span>Z3NITH'17 | Trailer</span>
             </div>
             <div class="image" data-video="https://www.youtube.com/embed/f2szmdziWZ4?">
-                <img src="asset/img/z15.png" alt="">
+                <img src="asset/img/z15.png" alt="" style="object-fit: fill;">
                 <span>Z3NITH'15 | Trailer</span>
             </div>
             <div class="image" data-video="https://www.youtube.com/embed/mx8zwQOqASM?">
@@ -280,7 +332,7 @@
                 <span>Z3NITH'13 | Trailer</span>
             </div>
             <div class="image" data-video="https://www.youtube.com/embed/2mvur73vxX4?">
-                <img src="asset/img/z12.png" alt="">
+                <img src="asset/img/z12.png" alt="" style="object-fit: fill;">
                 <span>Z3NITH'12 | Trailer</span>
             </div>
         </div>
@@ -300,13 +352,9 @@
                 image.addEventListener('click', () => {
                     const videoUrl = image.getAttribute('data-video');
                     changeVideo(videoUrl);
-                    
-                    // Remove 'active' class from previously clicked image
                     if (activeImage) {
                         activeImage.classList.remove('active');
                     }
-                    
-                    // Add 'active' class to the clicked image
                     image.classList.add('active');
                     activeImage = image;
                 });
