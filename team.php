@@ -263,6 +263,19 @@
                 margin: 0;
             }
         }
+        @media only screen and (max-width: 475px) {
+            .profile{
+                width: 250px;
+                height: 250px;
+            }
+
+        }
+        @media only screen and (max-width: 385px) {
+            .profile{
+                height: 180px;
+                width: 180px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -339,7 +352,7 @@
                 <img src="asset/img/mayank.jpg" alt="Profile 1">
                 <h2>Mayank Kumar</h2>
                 <p>Event Lead (Keynote)</p>
-                <p class="des">Professional Reeler, Dreamer, Designer & Paneer Enjoyer</p> 
+                <p class="des">Techy Sporty aspirant. Found everywhere outside of class.</p> 
             </div>
             <div class="profile">
                 <img src="asset/img/shivanshi.jpg" alt="Profile 1">
@@ -376,7 +389,7 @@
                 <p class="des">*Hmm* Genius, billionaire(almost), yapper, philanthropist</p> 
             </div>
             <div class="profile">
-                img src="asset/img/raghav.jpeg" alt="">
+                <img src="asset/img/raghav.jpeg" alt="">
                 <h2>Raghav Bhaukandi</h2>
                 <p>Alumni (Advisor)</p>
                 <p class="des">Des</p>
