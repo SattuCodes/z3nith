@@ -8,6 +8,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
         @import url('https://fonts.cdnfonts.com/css/source-serif-pro');
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -31,44 +33,60 @@
             position: relative;
             width: 400px;
             height: 400px;
-            padding: 50px;
+            padding: 40px;
             display: flex;
             flex-direction: column;
             background-color: #ffffff;
             border-radius: 30px;
             border: 2px solid #b1b8cd;
-            justify-content: center;
-            align-items: center;
             transition: height 0.3s ease;
         }
+        .profile .img-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
         .profile img {
-            width: 200px;
-            height: 200px;
+            width: 160px;
+            height: 160px;
             object-fit: cover;
-            border-radius: 50%;
+            border-radius: 100%;
+            margin-top: 20px;
+        }
+        .profile h2,
+        .profile p {
+            text-align: center;
         }
         .profile h2 {
             margin-top: 20px;
-            font-size: 25px;
-            font-family: 'Source Serif Pro';
+            font-size: 22px;
+            font-family: 'Source Serif Pro', serif;
             font-weight: 600;
-            text-align: center;
         }
         .profile p {
-            margin-top: 3px;
-            font-size: 20px;
-            text-align: center;
+            margin-top: 2px;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: bold;
         }
         .profile .des {
             display: none;
-            margin-top: 25px;
-            font-size: 18px;
-            text-align: center;
+            font-family: "Roboto", sans-serif;
+            margin-top: 27px;
+            font-size: 16px;
             font-style: italic;
+            font-weight: 400;
+            line-height: 1.5;
+            word-spacing: 4px;
+            text-transform: none;
         }
         .profile::before {
             content: '';
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             background-color: #48D597;
@@ -77,23 +95,26 @@
             transition: all 0.3s ease;
         }
         .profile:hover::before {
-            top: 50px;
-            left: 80px;
+            top: 60px;
+            left: 70px;
         }
         .profile:hover {
-            height: 600px;
+            height: 550px;
         }
         .profile:hover .des {
             display: block;
         }
         @media only screen and (max-width: 1600px){
+            .profile .img-container{
+                margin-top: 40px
+            }
             .profile {
                 width: 350px;
                 height: 350px;
             }
             .profile img{
-                height: 150px;
-                width: 150px;
+                height: 130px;
+                width: 130px;
             }
             .profile h2{
                 font-size: 20px;
@@ -102,17 +123,23 @@
                 font-size: 15px;
             }
             .profile p{
-                font-size: 18px;
+                font-size: 15px;
+            }
+            .profile:hover{
+                height: 480px;
             }
         }
         @media only screen and (max-width: 1450px){
+            .profile .img-container{
+                margin-top: 30px
+            }
             .profile {
                 width: 300px;
                 height: 300px;
             }
             .profile img{
-                height: 125px;
-                width: 125px;
+                height: 110px;
+                width: 110px;
             }
             .profile h2{
                 font-size: 19px;
@@ -121,7 +148,10 @@
                 font-size: 14px;
             }
             .profile p{
-                font-size: 17px;
+                font-size: 14px;
+            }
+            .profile:hover{
+                height: 450px;
             }
         }
         @media only screen and (max-width: 1370px){
@@ -208,19 +238,26 @@
     <div class="container" style="margin-top: 200px;">
         <div class="row">
             <div class="profile">
-                <img src="asset/img/maam.jpg" alt="Profile 1">
+                <div class="img-container">
+                    <img src="asset/img/maam.jpg" alt="Profile 1">
+                </div>
+                
                 <h2>Ms. Mohini Arora</h2>
                 <p>Event Director</p>
                 <p class="des">Des</p> 
             </div>
             <div class="profile">
-                <img src="asset/img/prajwal.jpg" alt="Profile 2">
+                <div class="img-container">
+                    <img src="asset/img/prajwal.jpg" alt="Profile 2">
+                </div>
                 <h2>Prajwal</h2>
                 <p>Mentor Coordinator</p>
                 <p class="des">des</p> 
             </div>
             <div class="profile">
-                <img src="asset/img/abhinav.jpeg" alt="Profile 3">
+                <div class="img-container">
+                    <img src="asset/img/abhinav.jpeg" alt="Profile 3">
+                </div>
                 <h2>Abhinav Mishra</h2>
                 <p>PR Head</p>
                 <p class="des">des</p>
@@ -228,19 +265,27 @@
         </div>
         <div class="row">
             <div class="profile">
-                <img src="asset/img/bhavya.jpg" alt="Profile 1">
+                <div class="img-container">
+                    <img src="asset/img/pookay.jpg" alt="Profile 1">
+                </div>
                 <h2>Bhavya Dhariwal</h2>
                 <p>Executive - Tech</p>
                 <p class="des">A passionate gamer, art lover, and classical dancer who embraces technology and cherishes tradition. Organized yet clumsy, she brings creativity to everything she does</p> 
             </div>
             <div class="profile">
-                <img src="asset/img/deluluheadboy.jpg" alt="Profile 1">
+                <div class="img-container">
+                    <img src="asset/img/deluluheadboy.jpg" alt="Profile 1">
+                </div>
+                
                 <h2>Maulik Pandey</h2>
                 <p>Executive - Operations</p>
                 <p class="des">Always sleeping with his playlist on the play right beside him; p.s.-don't try to take away his music and bed from him unless you want him mad :)</p> 
             </div>
             <div class="profile">
-                <img src="asset/img/kabir.jpg" alt="Profile 1">
+                <div class="img-container">
+                    <img src="asset/img/kabir.jpg" alt="Profile 1">
+                </div>
+                
                 <h2>Kabir Jhamb</h2>
                 <p>President</p>
                 <p class="des">Des</p> 
@@ -248,40 +293,56 @@
         </div>
         <div class="row">
             <div class="profile">
-                <img src="asset/img/sarthak.jpeg" alt="Profile 1">
+                <div class="img-container">
+                    <img src="asset/img/sarthak.jpeg" alt="Profile 1">
+                </div>
+                
                 <h2>Sarthak Singh</h2>
                 <p>Vice President</p>
                 <p class="des">A patient guy. He clicks chrome just once and waits.</p> 
             </div>
             <div class="profile">
-                <img src="" alt="Profile 1">
+                <div class="img-container">
+                    <img src="" alt="Profile 1">
+                </div>
+                
                 <h2>Satyam Tiwari</h2>
                 <p>Website Manager</p>
                 <p class="des">Des</p> 
             </div>
             <div class="profile">
-                <img src="asset/img/artist.jpeg" alt="Profile 1">
+                <div class="img-container">
+                    <img src="asset/img/artist.jpeg" alt="Profile 1">
+                </div>
+                
                 <h2>Aditi Gupta</h2>
                 <p>Event Lead (Uncover)</p>
-                <p class="des">probably your 66 year old multitasker technologically challenged granny
-</p> 
+                <p class="des">probably your 66 year old multitasker technologically challenged granny</p> 
             </div>
         </div>
         <div class="row">
             <div class="profile">
-                <img src="asset/img/chapra.jpg" alt="">
+                <div class="img-container">
+                    <img src="asset/img/chapra.jpg" alt="">
+                </div>
+                
                 <h2>Satyam Kumar</h2>
                 <p>Event Lead (Frame By Frame)</p>
                 <p class="des">Des</p>
             </div>
             <div class="profile">
-                <img src="asset/img/mayank.jpg" alt="Profile 1">
+                <div class="img-container">
+                    <img src="asset/img/mayank.jpg" alt="Profile 1">
+                </div>
                 <h2>Mayank Kumar</h2>
                 <p>Event Lead (Keynote)</p>
                 <p class="des">Des</p> 
             </div>
             <div class="profile">
-                <img src="asset/img/shivanshi.jpg" alt="Profile 1">
+                <div class="img-container">
+                    <img src="asset/img/shivanshi.jpg" alt="Profile 1">
+                </div>
+                
                 <h2>Shivanshi Tanwar</h2>
                 <p>Event Lead (Keynote)</p>
                 <p class="des">Just a beginner , on the way to learn new things</p> 
@@ -290,19 +351,28 @@
         </div>
         <div class="row">
             <div class="profile">
-                <img src="asset/img/skullvansh.jpg" alt="Profile 1">
+                <div class="img-container">
+                    <img src="asset/img/skullvansh.jpg" alt="Profile 1">
+                </div>
+                
                 <h2>Vansh Bhasin</h2>
                 <p>Alumni (Advisor)</p>
                 <p class="des">Des</p> 
             </div>
             <div class="profile">
-                <img src="asset/img/droy.jpeg" alt="Profile 1">
+                <div class="img-container">
+                    <img src="asset/img/droy.jpeg" alt="Profile 1">
+                </div>
+                
                 <h2>Debangshu Roy</h2>
                 <p>Alumni (Advisor)</p>
                 <p class="des">Coffee chords and code... that's all that is.. that's all he is</p> 
             </div>
             <div class="profile">
-                <img src="" alt="Profile 1">
+                <div class="img-container">
+                    <img src="" alt="Profile 1">
+                </div>
+                
                 <h2>Shivya Verma</h2>
                 <p>Alumni (Advisor)</p>
                 <p class="des">Des</p> 
@@ -311,13 +381,19 @@
         </div>
         <div class="row">
             <div class="profile">
-                <img src="asset/img/datta.jpg" alt="Profile 1">
+                <div class="img-container">
+                    <img src="asset/img/datta.jpg" alt="Profile 1">
+                </div>
+                
                 <h2>Saptangshu Datta</h2>
                 <p>Alumni (Advisor)</p>
                 <p class="des">*Hmm* Genius, billionaire(almost), yapper, philanthropist</p> 
             </div>
             <div class="profile">
-                <img src="asset/img/raghav.jpeg" alt="">
+                <div class="img-container">
+                    <img src="asset/img/raghav.jpeg" alt="">
+                </div>
+                
                 <h2>Raghav Bhaukandi</h2>
                 <p>Alumni (Advisor)</p>
                 <p class="des">Des</p>
