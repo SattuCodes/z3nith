@@ -38,13 +38,8 @@
             border-radius: 30px;
             border: 2px solid #b1b8cd;
             transition: height 0.3s ease;
-        }
-        .profile .img-container {
-            margin-top: 90px;
-            display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
         }
         .profile img {
             width: 160px;
@@ -59,13 +54,14 @@
         }
         .profile h2 {
             margin-top: 20px;
-            font-size: 22px;
+            font-size: 28px;
             font-family: "source-serif-pro", serif;
             font-weight: 600;
         }
         .profile p {
             margin-top: 2px;
-            font-size: 16px;
+            font-size: 15px;
+            color: #1e1e1e;
             text-transform: uppercase;
             font-weight: bold;
         }
@@ -73,14 +69,14 @@
             display: none;
             font-family: "Roboto", sans-serif;
             margin-top: 27px;
-            font-size: 16px;
+            font-size: 17px;
             font-style: italic;
             font-weight: 400;
-            line-height: 1.5;
+            line-height: 1.2;
             word-spacing: 4px;
             text-transform: none;
             text-align: inherit;
-            padding: 0 65px;
+            padding: 0 40px;
         }
         .profile::before {
             content: '';
@@ -99,7 +95,7 @@
             left: 70px;
         }
         .profile:hover {
-            height: 550px;
+            height: 600px;
         }
         .profile:hover .des {
             display: block;
@@ -274,26 +270,19 @@
     <div class="container" style="margin-top: 200px;">
         <div class="row">
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/maam.jpg" alt="Profile 1">
-                </div>
-                
+                <img src="asset/img/maam.jpg" alt="Profile 1">
                 <h2>Ms. Mohini Arora</h2>
                 <p>Event Director</p>
                 <p class="des">Des</p> 
             </div>
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/prajwal.jpg" alt="Profile 2">
-                </div>
+                <img src="asset/img/prajwal.jpg" alt="Profile 2">
                 <h2>Prajwal</h2>
                 <p>Mentor Coordinator</p>
                 <p class="des">des</p> 
             </div>
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/abhinav.jpeg" alt="Profile 3">
-                </div>
+                <img src="asset/img/abhinav.jpeg" alt="Profile 3">
                 <h2>Abhinav Mishra</h2>
                 <p>PR Head</p>
                 <p class="des">des</p>
@@ -301,27 +290,19 @@
         </div>
         <div class="row">
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/pookay.jpg" alt="Profile 1">
-                </div>
+                <img src="asset/img/pookay.jpg" alt="Profile 1">
                 <h2>Bhavya Dhariwal</h2>
                 <p>Executive - Tech</p>
                 <p class="des">A passionate gamer, art lover, and classical dancer who embraces technology and cherishes tradition. Organized yet clumsy, she brings creativity to everything she does</p> 
             </div>
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/deluluheadboy.jpg" alt="Profile 1">
-                </div>
-                
+                <img src="asset/img/gugu.png" alt="Profile 1">
                 <h2>Maulik Pandey</h2>
                 <p>Executive - Operations</p>
                 <p class="des">Always sleeping with his playlist on the play right beside him; p.s.-don't try to take away his music and bed from him unless you want him mad :)</p> 
             </div>
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/kabir.jpg" alt="Profile 1">
-                </div>
-                
+                <img src="asset/img/kabir.jpg" alt="Profile 1">
                 <h2>Kabir Jhamb</h2>
                 <p>President</p>
                 <p class="des">Des</p> 
@@ -329,28 +310,19 @@
         </div>
         <div class="row">
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/sarthak.jpeg" alt="Profile 1">
-                </div>
-                
+                <img src="asset/img/sarthak.jpeg" alt="Profile 1">
                 <h2>Sarthak Singh</h2>
                 <p>Vice President</p>
                 <p class="des">A patient guy. He clicks chrome just once and waits.</p> 
             </div>
             <div class="profile">
-                <div class="img-container">
-                    <img src="" alt="Profile 1">
-                </div>
-                
+                <img src="asset/img/sutta.jpg" alt="Profile 1">
                 <h2>Satyam Tiwari</h2>
                 <p>Website Manager</p>
                 <p class="des">Des</p> 
             </div>
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/artist.jpeg" alt="Profile 1">
-                </div>
-                
+                <img src="asset/img/artist.jpeg" alt="Profile 1">
                 <h2>Aditi Gupta</h2>
                 <p>Event Lead (Uncover)</p>
                 <p class="des">probably your 66 year old multitasker technologically challenged granny</p> 
@@ -358,78 +330,53 @@
         </div>
         <div class="row">
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/chapra.jpg" alt="">
-                </div>
-                
+                <img src="asset/img/chapra.jpg" alt="">
                 <h2>Satyam Kumar</h2>
                 <p>Event Lead (Frame By Frame)</p>
-                <p class="des">Des</p>
+                <p class="des">Professional Reeler, Dreamer, Designer & Paneer Enjoyer</p>
             </div>
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/mayank.jpg" alt="Profile 1">
-                </div>
+                <img src="asset/img/mayank.jpg" alt="Profile 1">
                 <h2>Mayank Kumar</h2>
                 <p>Event Lead (Keynote)</p>
-                <p class="des">Des</p> 
+                <p class="des">Professional Reeler, Dreamer, Designer & Paneer Enjoyer</p> 
             </div>
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/shivanshi.jpg" alt="Profile 1">
-                </div>
-                
+                <img src="asset/img/shivanshi.jpg" alt="Profile 1">
                 <h2>Shivanshi Tanwar</h2>
                 <p>Event Lead (Keynote)</p>
                 <p class="des">Just a beginner , on the way to learn new things</p> 
             </div>
-            
         </div>
         <div class="row">
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/skullvansh.jpg" alt="Profile 1">
-                </div>
-                
+                <img src="asset/img/skullvansh.jpg" alt="Profile 1">
                 <h2>Vansh Bhasin</h2>
                 <p>Alumni (Advisor)</p>
                 <p class="des">Des</p> 
             </div>
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/droy.jpeg" alt="Profile 1">
-                </div>
-                
+                <img src="asset/img/droy.jpeg" alt="Profile 1">
                 <h2>Debangshu Roy</h2>
                 <p>Alumni (Advisor)</p>
                 <p class="des">Coffee chords and code... that's all that is.. that's all he is</p> 
             </div>
             <div class="profile">
-                <div class="img-container">
-                    <img src="" alt="Profile 1">
-                </div>
-                
+                <img src="" alt="Profile 1">
                 <h2>Shivya Verma</h2>
                 <p>Alumni (Advisor)</p>
                 <p class="des">Des</p> 
             </div>
-            
         </div>
         <div class="row">
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/datta.jpg" alt="Profile 1">
-                </div>
-                
+                <img src="asset/img/datta.jpg" alt="Profile 1">
                 <h2>Saptangshu Datta</h2>
                 <p>Alumni (Advisor)</p>
                 <p class="des">*Hmm* Genius, billionaire(almost), yapper, philanthropist</p> 
             </div>
             <div class="profile">
-                <div class="img-container">
-                    <img src="asset/img/raghav.jpeg" alt="">
-                </div>
-                
+                img src="asset/img/raghav.jpeg" alt="">
                 <h2>Raghav Bhaukandi</h2>
                 <p>Alumni (Advisor)</p>
                 <p class="des">Des</p>

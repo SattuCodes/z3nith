@@ -80,7 +80,7 @@
     font-weight: 500;
     font-style: normal;
     color: #64729C;
-    font-size: 27px;
+    font-size: 25px;
     padding-bottom: 24px;
 }
 
@@ -176,12 +176,13 @@
         width: 100%;
         display: grid;
         grid-auto-flow: column;
-        height: 23vh;
+        height: 27vh;
         direction: ltr;
         gap: 11rem;
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
         scrollbar-color: initial;
+        overflow-y: hidden;
     }
 
     .image {
@@ -196,6 +197,7 @@
         font-size: 19px;
     }
 }
+
 @media only screen and (max-height: 752px) and (max-width: 1310px) {
     #videoPlayer {
         width: 100%;
@@ -205,8 +207,11 @@
     .player {
         width: 100%;
         max-width: 1310px;
-        height: 370px;
+        height: 400px;
         margin: 0;
+    }
+    .click{
+        overflow-y: hidden;
     }
 }
 @media only screen and (max-height: 673px) and (max-width: 1310px) {
@@ -220,6 +225,9 @@
         max-width: 1310px;
         height: 320px;
         margin: 0;
+    }
+    .click{
+        overflow-y: hidden;
     }
 }
 @media only screen and (max-width: 1700px) {
@@ -237,10 +245,15 @@
         min-height: 350px;
     }
 }
+@media only screen and (max-height: 800px) {
+    .click img{
+        height: 144px
+    }
+}
 @media only screen and (max-width: 1500px) {
     .click img{
-        width: 300px;
-        height: 170px;
+        width: 200px;
+        height: 150px;
     }
     .image{
         min-height: 270px;
@@ -253,6 +266,16 @@
     }
     .image{
         min-height: 200px;
+    }
+}
+@media only screen and (max-height: 800px) {
+    .click img{
+        height: 17vh;
+    }
+}
+@media only screen and (max-height: 784px) {
+    .click img{
+        height: 13vh;
     }
 }
     </style>
