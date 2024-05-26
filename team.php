@@ -178,10 +178,13 @@
             .profile p{
                 font-size: 13px;
             }
+            .profile:hover{
+                height: 430px;
+            }
         }
         @media only screen and (max-width: 1270px){
-            .img-container{
-                margin-top: 50px;
+            .profile .img-container{
+                margin-top: 40px;
             }
             .profile {
                 width: 250px;
@@ -192,13 +195,17 @@
                 width: 100px;
             }
             .profile h2{
-                font-size: 18px;
+                font-size: 17px;
             }
             .profile .des{
-                font-size: 13px;
+                font-size: 12px;
+                padding: 0 20px;
             }
             .profile p{
-                font-size: 16px;
+                font-size: 12px;
+            }
+            .profile:hover{
+                height: 410px;
             }
         }
         @media only screen and (max-width: 1125px){
@@ -211,13 +218,16 @@
                 width: 83px;
             }
             .profile h2{
-                font-size: 17px;
+                font-size: 16px;
             }
             .profile .des{
-                font-size: 12px;
+                font-size: 11px;
             }
             .profile p{
-                font-size: 15px;
+                font-size: 11px;
+            }
+            .profile:hover{
+                height: 390px;
             }
         }
         @media only screen and (max-width: 1045px) {
