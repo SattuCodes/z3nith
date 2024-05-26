@@ -7,8 +7,7 @@
     <link rel="icon" type="image/x-icon" href="asset/img/unnamed (1) (1).png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-        @import url('https://fonts.cdnfonts.com/css/source-serif-pro');
-        <style>
+        @import url("https://use.typekit.net/gdz2chs.css");
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
         * {
             margin: 0;
@@ -33,7 +32,6 @@
             position: relative;
             width: 400px;
             height: 400px;
-            padding: 40px;
             display: flex;
             flex-direction: column;
             background-color: #ffffff;
@@ -42,7 +40,7 @@
             transition: height 0.3s ease;
         }
         .profile .img-container {
-            margin-top: 50px;
+            margin-top: 90px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -62,7 +60,7 @@
         .profile h2 {
             margin-top: 20px;
             font-size: 22px;
-            font-family: 'Source Serif Pro', serif;
+            font-family: "source-serif-pro", serif;
             font-weight: 600;
         }
         .profile p {
@@ -81,6 +79,8 @@
             line-height: 1.5;
             word-spacing: 4px;
             text-transform: none;
+            text-align: inherit;
+            padding: 0 65px;
         }
         .profile::before {
             content: '';
@@ -106,7 +106,7 @@
         }
         @media only screen and (max-width: 1600px){
             .profile .img-container{
-                margin-top: 40px
+                margin-top: 80px
             }
             .profile {
                 width: 350px;
@@ -121,6 +121,7 @@
             }
             .profile .des{
                 font-size: 15px;
+                padding: 0 60px;
             }
             .profile p{
                 font-size: 15px;
@@ -131,7 +132,7 @@
         }
         @media only screen and (max-width: 1450px){
             .profile .img-container{
-                margin-top: 30px
+                margin-top: 70px
             }
             .profile {
                 width: 300px;
@@ -146,6 +147,7 @@
             }
             .profile .des{
                 font-size: 14px;
+                padding: 0 40px;
             }
             .profile p{
                 font-size: 14px;
@@ -155,6 +157,9 @@
             }
         }
         @media only screen and (max-width: 1370px){
+            .profile .img-container{
+                margin-top: 50px;
+            }
             .profile {
                 width: 260px;
                 height: 260px;
@@ -164,17 +169,20 @@
                 width: 110px;
             }
             .profile h2{
-                font-size: 18.5px;
+                font-size: 18px;
             }
             .profile .des{
-                font-size: 14.5px;
+                font-size: 13px;
+                padding: 0 30px;
             }
             .profile p{
-                font-size: 17.5px;
+                font-size: 13px;
             }
         }
-
         @media only screen and (max-width: 1270px){
+            .img-container{
+                margin-top: 50px;
+            }
             .profile {
                 width: 250px;
                 height: 250px;
@@ -213,22 +221,40 @@
             }
         }
         @media only screen and (max-width: 1045px) {
+            .profile .img-container{
+                margin-top: 30px
+            }
             .profile {
-                width: 185px;
-                height: 185px;
+                width: 300px;
+                height: 300px;
             }
             .profile img{
-                height: 60px;
-                width: 60px;
+                height: 110px;
+                width: 110px;
             }
             .profile h2{
-                font-size: 16px;
+                font-size: 19px;
             }
             .profile .des{
-                font-size: 11px;
+                font-size: 14px;
             }
             .profile p{
                 font-size: 14px;
+            }
+            .profile:hover{
+                height: 450px;
+            }
+        }
+        @media only screen and (max-width: 880px) {
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .container:hover{
+                margin-right: 20px !important;
+                margin: 0;
             }
         }
     </style>
@@ -400,5 +426,48 @@
             </div>
         </div>
     </div>
+    <script>
+    function rearrangeProfiles() {
+        const container = document.querySelector('.container');
+        const profiles = Array.from(container.querySelectorAll('.profile'));
+        container.innerHTML = '';
+        if (window.matchMedia('(max-width: 880px)').matches) {
+            profiles.forEach(profile => {
+                const newRow = document.createElement('div');
+                newRow.classList.add('row');
+                newRow.appendChild(profile);
+                container.appendChild(newRow);
+            });
+        } else if (window.matchMedia('(max-width: 1045px)').matches) {
+            let newRow;
+            profiles.forEach((profile, index) => {
+                if (index % 2 === 0) {
+                    newRow = document.createElement('div');
+                    newRow.classList.add('row');
+                    container.appendChild(newRow);
+                }
+                newRow.appendChild(profile);
+            });
+        } else {
+            let newRow;
+            profiles.forEach((profile, index) => {
+                if (index % 3 === 0) {
+                    newRow = document.createElement('div');
+                    newRow.classList.add('row');
+                    container.appendChild(newRow);
+                }
+                newRow.appendChild(profile);
+            });
+        }
+    }
+    const mediaQuery880 = window.matchMedia('(max-width: 880px)');
+    const mediaQuery1045 = window.matchMedia('(max-width: 1045px)');
+    mediaQuery880.addListener(rearrangeProfiles);
+    mediaQuery1045.addListener(rearrangeProfiles);
+    rearrangeProfiles();
+</script>
+
+
+
 </body>
 </html>
