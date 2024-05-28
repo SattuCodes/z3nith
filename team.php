@@ -284,7 +284,7 @@
                 font-size: 14px;
             }
             .profile .des{
-                font-size: 16px;
+                font-size: 12px;
             }
         }
         @media only screen and (max-width: 400px) {
@@ -303,7 +303,7 @@
                 font-size: 13px;
             }
             .profile .des{
-                font-size: 15px;
+                font-size: 12px;
             }
             .profile:hover{
                 height: 400px
