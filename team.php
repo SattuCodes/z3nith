@@ -264,11 +264,16 @@
             }
         }
         @media only screen and (max-width: 475px) {
-            .profile{
-                width: 250px;
-                height: 250px;
+            *{
+                overflow-x: hidden;
             }
-
+            .profile{
+                width: 300px;
+                height: 300px;
+            }
+            .container{
+                margin: 30px 0px;
+            }
         }
         @media only screen and (max-width: 385px) {
             .profile{
@@ -303,7 +308,7 @@
         </div>
         <div class="row">
             <div class="profile">
-                <img src="asset/img/pookay.jpg" alt="Profile 1">
+                <img src="asset/img/babya.jpg" alt="Profile 1">
                 <h2>Bhavya Dhariwal</h2>
                 <p>Executive - Tech</p>
                 <p class="des">A passionate gamer, art lover, and classical dancer who embraces technology and cherishes tradition. Organized yet clumsy, she brings creativity to everything she does</p> 
