@@ -175,7 +175,7 @@
                 font-size: 12px;
             }
             .profile:hover{
-                height: 430px;
+                height: 400px;
             }
         }
         @media only screen and (max-width: 1270px){
