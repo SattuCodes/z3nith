@@ -282,31 +282,15 @@
 
 @media only screen and (max-width: 1600px) and (max-height: 900px) {
     .click img {
-        height: 220px;
+        height: 190px;
         width: 310px;
     }
     .image {
         min-height: 293px;
     }
 }
-@media only screen and (max-width: 1440px) and (max-height: 900px) {
-    .click img {
-        height: 190px;
-        width: 304px;
-    }
-    .image {
-        min-height: 293px;
-    }
-}
-@media only screen and (max-width: 1400px) and (max-height: 800px) {
-    .click img {
-        width: 230px;
-        height: 145px;
-    }
-    .image {
-        min-height: 245px;
-    }
-}
+
+
 @media only screen and (max-width: 1440px) and (max-height: 830px) {
     .click img {
         height: 150px;
@@ -352,7 +336,24 @@
         min-height: 293px;
     }
 }
-
+@media only screen and (max-width: 1440px) and (min-height: 900px) {
+    .click img {
+        height: 190px;
+        width: 304px;
+    }
+    .image {
+        min-height: 293px;
+    }
+}
+@media only screen and (max-width: 1400px) and (max-height: 800px) {
+    .click img {
+        width: 230px;
+        height: 140px;
+    }
+    .image {
+        min-height: 240px;
+    }
+}
     </style>
 </head>
 <body>
