@@ -113,14 +113,14 @@
                 width: 130px;
             }
             .profile h2{
-                font-size: 20px;
+                font-size: 26px;
             }
             .profile .des{
-                font-size: 15px;
+                font-size: 16px;
                 padding: 0 60px;
             }
             .profile p{
-                font-size: 15px;
+                font-size: 14px;
             }
             .profile:hover{
                 height: 480px;
@@ -139,14 +139,14 @@
                 width: 110px;
             }
             .profile h2{
-                font-size: 19px;
+                font-size: 23px;
             }
             .profile .des{
-                font-size: 14px;
+                font-size: 15px;
                 padding: 0 40px;
             }
             .profile p{
-                font-size: 14px;
+                font-size: 13px;
             }
             .profile:hover{
                 height: 450px;
@@ -165,14 +165,14 @@
                 width: 110px;
             }
             .profile h2{
-                font-size: 18px;
+                font-size: 21px;
             }
             .profile .des{
-                font-size: 13px;
+                font-size: 15px;
                 padding: 0 30px;
             }
             .profile p{
-                font-size: 13px;
+                font-size: 12px;
             }
             .profile:hover{
                 height: 430px;
@@ -191,10 +191,10 @@
                 width: 100px;
             }
             .profile h2{
-                font-size: 17px;
+                font-size: 21px;
             }
             .profile .des{
-                font-size: 12px;
+                font-size: 14px;
                 padding: 0 20px;
             }
             .profile p{
@@ -214,10 +214,10 @@
                 width: 83px;
             }
             .profile h2{
-                font-size: 16px;
+                font-size: 20px;
             }
             .profile .des{
-                font-size: 11px;
+                font-size: 13px;
             }
             .profile p{
                 font-size: 11px;
@@ -227,9 +227,6 @@
             }
         }
         @media only screen and (max-width: 1045px) {
-            .profile .img-container{
-                margin-top: 30px
-            }
             .profile {
                 width: 300px;
                 height: 300px;
@@ -239,13 +236,13 @@
                 width: 110px;
             }
             .profile h2{
-                font-size: 19px;
+                font-size: 27px;
             }
             .profile .des{
-                font-size: 14px;
+                font-size: 17px;
             }
             .profile p{
-                font-size: 14px;
+                font-size: 15px;
             }
             .profile:hover{
                 height: 450px;
@@ -264,9 +261,6 @@
             }
         }
         @media only screen and (max-width: 475px) {
-            *{
-                overflow-x: hidden;
-            }
             .profile{
                 width: 300px;
                 height: 300px;
@@ -274,11 +268,45 @@
             .container{
                 margin: 30px 0px;
             }
+            .profile:hover{
+                height: 500px;
+            }
         }
-        @media only screen and (max-width: 385px) {
+        @media only screen and (max-width: 450px) {
             .profile{
-                height: 180px;
-                width: 180px;
+                height: 250px;
+                width: 250px;
+            }
+            .profile h2{
+                font-size: 23px;
+            }
+            .profile p{
+                font-size: 14px;
+            }
+            .profile .des{
+                font-size: 16px;
+            }
+        }
+        @media only screen and (max-width: 400px) {
+            .profile img{
+                height: 80px;
+                width: 80px;
+            }
+            .profile{
+                height: 200px;
+                width: 200px;
+            }
+            .profile h2{
+                font-size: 20px;
+            }
+            .profile p{
+                font-size: 13px;
+            }
+            .profile .des{
+                font-size: 15px;
+            }
+            .profile:hover{
+                height: 400px
             }
         }
     </style>
