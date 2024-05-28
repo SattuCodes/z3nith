@@ -336,7 +336,7 @@
         min-height: 293px;
     }
 }
-@media only screen and (max-width: 1440px) and (min-height: 900px) {
+@media only screen and (max-width: 1440px) and (min-height: 731px) {
     .click img {
         height: 190px;
         width: 304px;
@@ -354,6 +354,7 @@
         min-height: 240px;
     }
 }
+
     </style>
 </head>
 <body>
