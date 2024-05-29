@@ -331,7 +331,7 @@
                 <img src="asset/img/abhinav.jpeg" alt="Profile 3">
                 <h2>Abhinav Mishra</h2>
                 <p>PR Head</p>
-                <p class="des">des</p>
+                <p class="des">Spending half his life Rotoscoping water, one mask at a time.</p>
             </div>
         </div>
         <div class="row">

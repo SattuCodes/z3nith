@@ -247,9 +247,9 @@
 }
 
 @media only screen and (max-width: 1500px) {
-    .click img{
-        width: 200px;
-        height: 150px;
+    .click img {
+        width: 258px;
+        height: 185px;
     }
     .image{
         min-height: 270px;
@@ -280,7 +280,7 @@
     }
 }
 
-@media only screen and (max-width: 1600px) and (max-height: 900px) {
+@media only screen and (max-width: 1600px) and (min-height: 900px) {
     .click img {
         height: 190px;
         width: 310px;
@@ -297,7 +297,7 @@
         width: 304px;
     }
     .image {
-        min-height: 293px;
+        min-height: 250px;
     }
 }
 @media only screen and (max-width: 1440px) and (max-height: 799px) {
@@ -336,7 +336,7 @@
         min-height: 293px;
     }
 }
-@media only screen and (max-width: 1440px) and (min-height: 731px) {
+@media only screen and (min-width: 1440px) and (max-height: 731px) {
     .click img {
         height: 190px;
         width: 304px;
@@ -345,7 +345,7 @@
         min-height: 293px;
     }
 }
-@media only screen and (max-width: 1400px) and (max-height: 800px) {
+@media only screen and (min-width: 1400px) and (max-height: 800px) {
     .click img {
         width: 230px;
         height: 140px;
@@ -354,7 +354,19 @@
         min-height: 240px;
     }
 }
+@media only screen and (min-width: 1349px) and (max-height: 599px) {
+    .click img {
+        height: 155px;
+        width: 245px;
+    }
+    .image {
+        min-height: 228px;
+    }
+    .image span{
+        font-size: 18px;
+    }
 
+}
     </style>
 </head>
 <body>
