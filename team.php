@@ -342,7 +342,7 @@
                 <p class="des">A passionate gamer, art lover, and classical dancer who embraces technology and cherishes tradition. Organized yet clumsy, she brings creativity to everything she does</p> 
             </div>
             <div class="profile">
-                <img src="asset/img/gugu.png" alt="Profile 1">
+                <img src="asset/img/deluluheadboy.jpg" alt="Profile 1">
                 <h2>Maulik Pandey</h2>
                 <p>Executive - Operations</p>
                 <p class="des">Always sleeping with his playlist on the play right beside him; p.s.-don't try to take away his music and bed from him unless you want him mad :)</p> 
@@ -396,10 +396,10 @@
         </div>
         <div class="row">
             <div class="profile">
-                <img src="asset/img/skullvansh.jpg" alt="Profile 1">
+                <img src="asset/img/skullvansh.jpeg" alt="Profile 1">
                 <h2>Vansh Bhasin</h2>
                 <p>Alumni (Advisor)</p>
-                <p class="des">Des</p> 
+                <p class="des">Finally stopped eating sugar, gym is love hate relationship💀💀💀💀</p> 
             </div>
             <div class="profile">
                 <img src="asset/img/droy.jpeg" alt="Profile 1">
@@ -425,7 +425,7 @@
                 <img src="asset/img/raghav.jpeg" alt="">
                 <h2>Raghav Bhaukandi</h2>
                 <p>Alumni (Advisor)</p>
-                <p class="des">Des</p>
+                <p class="des">Professional ‘hello world’ printer, does web development sometimes.</p>
             </div>
         </div>
     </div>
