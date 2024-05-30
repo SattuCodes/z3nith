@@ -54,7 +54,6 @@
             height: 500px;
             margin-bottom: 32px;
             margin-right: 130px;
-
         }
         .vlt{
             border-left: 3px solid black;
@@ -81,9 +80,21 @@
         .emo{
             font-size: 190px;
             height: 277px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
         }
-        @keyframes animation {
-            
+        .emo span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        }
+        .hidden {
+            opacity: 0;
+        }
+        .visible {
+            opacity: 1;
         }
     </style>
 </head>
@@ -106,8 +117,41 @@
         <img src="asset/img/unnamed (1) (1).png" alt="">
         <div class="vl"></div>
         <div class="emo">
-            &#127758;
+            <span class="visible" style="z-index: 1;">&#127758;</span>
+            <span class="hidden" style="z-index: 0;">&#127757;</span>
+            <span class="hidden" style="z-index: 0;">&#127759;</span>
+            <span class="hidden" style="z-index: 0;">&#127760;</span>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const spans = document.querySelectorAll('.emo span');
+            let currentIndex = 0;
+
+            function updateVisibility() {
+                spans.forEach((span, index) => {
+                    if (index === currentIndex) {
+                        span.classList.remove('hidden');
+                        span.classList.add('visible');
+                        span.style.transform = 'translateY(0)';
+                        span.style.zIndex = 1;
+                    } else {
+                        span.classList.remove('visible');
+                        span.classList.add('hidden');
+                        span.style.transform = 'translateY(-80px)';
+                        span.style.zIndex = 0;
+                    }
+                });
+            }
+
+            function onKeyframe() {
+                currentIndex = (currentIndex + 1) % spans.length;
+                updateVisibility();
+            }
+
+            updateVisibility();
+            setInterval(onKeyframe, 4000);
+        });
+    </script>
 </body>
 </html>
