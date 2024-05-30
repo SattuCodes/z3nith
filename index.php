@@ -61,6 +61,30 @@
             height: 500px;
             margin-left: 40px;
         }
+        .ani{
+            height: 786px;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+        }
+        .ani img{
+            width: 10%;
+        }
+        .vl{
+            border-left: 3px solid black;
+            height: 180px;
+            margin-left: 80px;
+            margin-right: 44px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        .emo{
+            font-size: 190px;
+            height: 277px;
+        }
+        @keyframes animation {
+            
+        }
     </style>
 </head>
 <body>
@@ -77,6 +101,13 @@
             26 July 2024
         </p>
         <div class="vlt"></div>
+    </div>
+    <div class="ani">
+        <img src="asset/img/unnamed (1) (1).png" alt="">
+        <div class="vl"></div>
+        <div class="emo">
+            &#127758;
+        </div>
     </div>
 </body>
 </html>

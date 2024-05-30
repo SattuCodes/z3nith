@@ -328,7 +328,7 @@
                 <p class="des">des</p> 
             </div>
             <div class="profile">
-                <img src="asset/img/abhinav.jpeg" alt="Profile 3">
+                <img src="asset/img/abhinavnew.jpeg" alt="Profile 3">
                 <h2>Abhinav Mishra</h2>
                 <p>PR Head</p>
                 <p class="des">Spending half his life Rotoscoping water, one mask at a time.</p>
