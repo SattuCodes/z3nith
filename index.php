@@ -96,6 +96,15 @@
         .visible {
             opacity: 1;
         }
+        @media only screen and (max-width: 1500px) and (max-height: 800px){
+            .emo {
+                font-size: 145px;
+                height: 217px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+            }
+        }
     </style>
 </head>
 <body>
