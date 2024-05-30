@@ -127,7 +127,6 @@
         document.addEventListener('DOMContentLoaded', function () {
             const spans = document.querySelectorAll('.emo span');
             let currentIndex = 0;
-
             function updateVisibility() {
                 spans.forEach((span, index) => {
                     if (index === currentIndex) {
@@ -143,12 +142,10 @@
                     }
                 });
             }
-
             function onKeyframe() {
                 currentIndex = (currentIndex + 1) % spans.length;
                 updateVisibility();
             }
-
             updateVisibility();
             setInterval(onKeyframe, 4000);
         });
