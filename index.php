@@ -68,12 +68,15 @@
             background-color: #f5f5f5;
             position: relative; 
             z-index: 1; 
+            padding: 200px 0px;
+            transition: transform 0.5s ease-in-out; 
         }
         .ani.fixed {
             position: fixed; 
-            top: 0; 
+            top: 125px; 
             left: 0; 
             right: 0; 
+            transform: translateY(-125px);
         }
         .ani img{
             width: 10%;
