@@ -60,6 +60,9 @@
             height: 500px;
             margin-left: 40px;
         }
+        .nav-list{
+            margin-right: 51px !important;
+        }
         .ani{
             height: 600px;
             display: flex;

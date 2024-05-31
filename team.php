@@ -41,6 +41,12 @@
             justify-content: center;
             align-items: center;
         }
+        #issuenigga{
+            font-size: 24px !important;
+        }
+        .nav-list{
+            margin-right: 51px !important;
+        }
         .profile img {
             width: 160px;
             height: 160px;
