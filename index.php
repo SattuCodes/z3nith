@@ -170,8 +170,6 @@ Together, let's ignite the spark of innovation and lead the charge towards a sus
                 const bgColor = colors[colorIndex];
                 content.style.backgroundColor = bgColor;
             }
-
-            // Call the function on scroll and DOM load
             window.addEventListener('scroll', updateBackgroundColor);
             document.addEventListener('DOMContentLoaded', updateBackgroundColor);
         });
