@@ -64,52 +64,35 @@
             margin-right: 51px !important;
         }
         .ani{
-            height: 600px;
+            height: 86vh;
             display: flex;
             justify-content: center; 
             align-items: center;
             background-color: #f5f5f5;
             position: relative; 
-            z-index: 1; 
-            padding: 200px 0px;
-            transition: transform 0.5s ease-in-out; 
+            z-index: 1;
         }
         .ani.fixed {
             position: fixed; 
-            top: 125px; 
+            top: 245px; 
             left: 0; 
             right: 0; 
-            transform: translateY(-125px);
+            transform: translateY(-120px);
         }
         .ani img{
-            width: 10%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-        .vl{
-            border-left: 3px solid black;
-            height: 180px;
-            margin-left: 80px;
-            margin-right: 44px;
-            margin-bottom: 0px;
-            margin-top: 0px;
-        }
-        .emo{
-            width: 250px;
-            font-size: 190px;
-            height: 277px;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-        .emo span {
+        .ani .emoji {
             position: absolute;
-            left: 0;
-            top: 0;
-            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-        }
-        .hidden {
+            font-size: 14vw;
+            z-index: 2;
+            padding-bottom: 5.5vh;
             opacity: 0;
+            transition: opacity 2s;
         }
-        .visible {
+        .emoji.visible {
             opacity: 1;
         }
         .content {
@@ -118,11 +101,13 @@
             align-items: center;
             font-family: "Lato";
             font-weight: 700;
-            padding: 80px 30px; 
+            padding: 80px 60px; 
             position: relative; 
             font-size: 50px;
             z-index: 2; 
             height: 790px;
+            background-color: white;
+            color: #256D4E;
         }
         @media only screen and (max-width: 1500px) and (max-height: 800px){
             .emo {
@@ -133,23 +118,41 @@
                 position: relative;
             }
         }
-        .content {
-        transition: background-color 2s;
+        .bgtxt{
+            text-transform: uppercase;
+            color: white;
+            font-size: 50px;
+            font-family: "Lato";
+            font-weight: 700;
+            z-index: 0;
+            position: absolute;
+            top: 50%;
+            left: 150px;
+            transform: translateY(-50%);
         }
-        .content.color-0 {
-            background-color: #214030;
+        .events{
+            height: 86vh;
+            background-color: #1e1e1e;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
         }
-        .content.color-1 {
-            background-color: #376b50;
+        .scrollable-content {
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+            width: 100%;
+            padding-left: 350px; /* Adjust the padding as per your requirement */
         }
-        .content.color-2 {
-            background-color: #4d9670;
+        .event{
+            height: 200px;
+            min-width: 150px;
+            margin-right: 20px;
+            flex: none;
         }
-        .content.color-3 {
-            background-color: #63c190;
-        }
-        .content.color-4 {
-            background-color: #6ed6a0;
+        .event h1{
+            color: white;
         }
     </style>
 </head>
@@ -169,79 +172,69 @@
         <div class="vlt"></div>
     </div>
     <div class="ani" id="ani">
-        <img src="asset/img/unnamed (1) (1).png" alt="">
-        <div class="vl"></div>
-        <div class="emo">
-            <span class="visible" style="z-index: 1;">&#127758;</span>
-            <span class="hidden" style="z-index: 0;">&#127757;</span>
-            <span class="hidden" style="z-index: 0;">&#127759;</span>
-            <span class="hidden" style="z-index: 0;">&#127760;</span>
+        <img src="asset/img/bg2.jpg" alt="">
+        <div class="emoji" id="emoji-1">🌎</div>
+        <div class="emoji" id="emoji-2">🌍</div>
+        <div class="emoji" id="emoji-3">🌏</div>
+        <div class="emoji" id="emoji-4">🌐</div>
+    </div>
+    <div class="content">"Step into the future where the brilliance of technology meets the imperative of sustainability." <br>This year, our premier tech event, Z3NITH is dedicated to exploring cutting-edge innovations that drive sustainable practices. From eco-friendly tech solutions to green energy advancements, discover how technology is shaping our future. Together, let's ignite the spark of innovation and lead the charge towards a sustainable world.
+    </div>
+    <div class="events">
+        <div class="bgtxt">
+            Events <br> this <br> year
+        </div>
+        <div class="scrollable-content">
+            <div class="event">
+                <h1>Uncover</h1>
+            </div>
+            <div class="event">
+                <h1>Frame By Frame</h1>
+            </div>
+            <div class="event">
+                <h1>Armageddon</h1>
+            </div>
+            <div class="event">
+                <h1>Keynote</h1>
+            </div>
         </div>
     </div>
-    <div class="content">"Step into the future where the brilliance of technology meets the imperative of sustainability." <br>
-
-This year, our premier tech event, Z3NITH is dedicated to exploring cutting-edge innovations that drive sustainable practices. From eco-friendly tech solutions to green energy advancements, discover how technology is shaping our future.
-Together, let's ignite the spark of innovation and lead the charge towards a sustainable world.</div>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const content = document.querySelector('.content');
+    document.addEventListener('DOMContentLoaded', function () {
+        const content = document.querySelector('.content');
+        const ani = document.getElementById('ani');
+        const aniHeight = ani.offsetHeight;
+        const contentHeight = content.offsetHeight;
+        const emojis = document.querySelectorAll('.emoji');
+        let currentEmojiIndex = 0;
 
-            function updateBackgroundColor() {
-                const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-                const scrollPercentage = window.scrollY / scrollableHeight;
+        window.addEventListener('scroll', function () {
+            const scrollY = window.scrollY;
+            const contentBottom = content.offsetTop + contentHeight;
 
-                if (scrollPercentage < 0.3) {
-                    content.className = 'content color-0';
-                } else if (scrollPercentage < 0.6) {
-                    content.className = 'content color-1';
-                } else if (scrollPercentage < 0.9) {
-                    content.className = 'content color-2';
-                } else {
-                    content.className = 'content color-3';
-                }
+            if (scrollY >= aniHeight && scrollY < contentBottom - window.innerHeight) {
+                ani.classList.add('fixed');
+                content.style.marginTop = aniHeight + 'px';
+            } else {
+                ani.classList.remove('fixed');
+                content.style.marginTop = '0';
             }
-            window.addEventListener('scroll', updateBackgroundColor);
-            document.addEventListener('DOMContentLoaded', updateBackgroundColor);
         });
-        document.addEventListener('DOMContentLoaded', function () {
-            const ani = document.getElementById('ani');
-            const content = document.querySelector('.content');
-            const aniHeight = ani.offsetHeight;
-            window.addEventListener('scroll', function () {
-                if (window.scrollY >= aniHeight) {
-                    ani.classList.add('fixed');
-                    content.style.marginTop = aniHeight + 'px';
+
+        function changeEmoji() {
+            emojis.forEach((emoji, index) => {
+                if (index === currentEmojiIndex) {
+                    emoji.classList.add('visible');
                 } else {
-                    ani.classList.remove('fixed');
-                    content.style.marginTop = '0';
+                    emoji.classList.remove('visible');
                 }
             });
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            const spans = document.querySelectorAll('.emo span');
-            let currentIndex = 0;
-            function updateVisibility() {
-                spans.forEach((span, index) => {
-                    if (index === currentIndex) {
-                        span.classList.remove('hidden');
-                        span.classList.add('visible');
-                        span.style.transform = 'translateY(0)';
-                        span.style.zIndex = 1;
-                    } else {
-                        span.classList.remove('visible');
-                        span.classList.add('hidden');
-                        span.style.transform = 'translateY(-80px)';
-                        span.style.zIndex = 0;
-                    }
-                });
-            }
-            function onKeyframe() {
-                currentIndex = (currentIndex + 1) % spans.length;
-                updateVisibility();
-            }
-            updateVisibility();
-            setInterval(onKeyframe, 2000);
-        });
+            currentEmojiIndex = (currentEmojiIndex + 1) % emojis.length;
+        }
+
+        changeEmoji();
+        setInterval(changeEmoji, 3000);
+    });
     </script>
 </body>
 </html>
