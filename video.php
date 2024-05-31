@@ -101,9 +101,6 @@
 }
 
 @media only screen and (max-width: 1310px) and (min-width: 587px) {
-    .nav-list li a{
-        font-size: 23px !important;
-    }
     #videoPlayer {
         width: 100%;
         max-width: 1310px;

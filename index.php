@@ -61,10 +61,19 @@
             margin-left: 40px;
         }
         .ani{
-            height: 786px;
+            height: 600px;
             display: flex;
             justify-content: center; 
             align-items: center;
+            background-color: #f5f5f5;
+            position: relative; 
+            z-index: 1; 
+        }
+        .ani.fixed {
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
         }
         .ani img{
             width: 10%;
@@ -78,6 +87,7 @@
             margin-top: 0px;
         }
         .emo{
+            width: 250px;
             font-size: 190px;
             height: 277px;
             display: flex;
@@ -95,6 +105,18 @@
         }
         .visible {
             opacity: 1;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Lato";
+            font-weight: 700;
+            padding: 80px 30px; 
+            position: relative; 
+            font-size: 50px;
+            z-index: 2; 
+            height: 790px;
         }
         @media only screen and (max-width: 1500px) and (max-height: 800px){
             .emo {
@@ -122,7 +144,7 @@
         </p>
         <div class="vlt"></div>
     </div>
-    <div class="ani">
+    <div class="ani" id="ani">
         <img src="asset/img/unnamed (1) (1).png" alt="">
         <div class="vl"></div>
         <div class="emo">
@@ -132,7 +154,41 @@
             <span class="hidden" style="z-index: 0;">&#127760;</span>
         </div>
     </div>
+    <div class="content">"Step into the future where the brilliance of technology meets the imperative of sustainability." <br>
+
+This year, our premier tech event, Z3NITH is dedicated to exploring cutting-edge innovations that drive sustainable practices. From eco-friendly tech solutions to green energy advancements, discover how technology is shaping our future.
+Together, let's ignite the spark of innovation and lead the charge towards a sustainable world.</div>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const colors = ['#256D4E', '#2E8861', '#4d9670', '#63c190', '#6ed6a0'];
+            const content = document.querySelector('.content');
+            
+            function updateBackgroundColor() {
+                const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercentage = window.scrollY / scrollableHeight;
+                const colorIndex = Math.min(Math.floor(scrollPercentage * colors.length), colors.length - 1);
+                const bgColor = colors[colorIndex];
+                content.style.backgroundColor = bgColor;
+            }
+
+            // Call the function on scroll and DOM load
+            window.addEventListener('scroll', updateBackgroundColor);
+            document.addEventListener('DOMContentLoaded', updateBackgroundColor);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const ani = document.getElementById('ani');
+            const content = document.querySelector('.content');
+            const aniHeight = ani.offsetHeight;
+            window.addEventListener('scroll', function () {
+                if (window.scrollY >= aniHeight) {
+                    ani.classList.add('fixed');
+                    content.style.marginTop = aniHeight + 'px';
+                } else {
+                    ani.classList.remove('fixed');
+                    content.style.marginTop = '0';
+                }
+            });
+        });
         document.addEventListener('DOMContentLoaded', function () {
             const spans = document.querySelectorAll('.emo span');
             let currentIndex = 0;

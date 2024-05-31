@@ -100,6 +100,18 @@
         .profile:hover .des {
             display: block;
         }
+        .txt{
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .txt h1{ 
+            font-size: 45px;
+            font-family: "source-serif-pro", serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #484848;
+        }
         @media only screen and (max-width: 1600px){
             .profile .img-container{
                 margin-top: 80px
@@ -249,7 +261,11 @@
             }
         }
         @media only screen and (max-width: 880px) {
+            .txt{
+                display: flex;
+            }
             .container{
+                margin-top: 100px !important;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -313,6 +329,7 @@
 </head>
 <body>
     <?php include 'navigation.html'?>
+    <div class="txt" style="margin-top: 180px;"><h1>Our Team</h1></div>
     <div class="container" style="margin-top: 200px;">
         <div class="row">
             <div class="profile">
