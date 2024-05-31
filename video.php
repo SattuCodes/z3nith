@@ -326,11 +326,11 @@
 }
 @media only screen and (max-width: 1440px) and (max-height: 695px) {
     .click img {
-        height: 75px;
-        width: 160px;
+        height: 182px;
+        width: 255px;
     }
     .image {
-        min-height: 293px;
+        min-height: 215px;
     }
 }
 @media only screen and (min-width: 1440px) and (max-height: 731px) {
