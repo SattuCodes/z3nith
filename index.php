@@ -133,6 +133,24 @@
                 position: relative;
             }
         }
+        .content {
+        transition: background-color 2s;
+        }
+        .content.color-0 {
+            background-color: #214030;
+        }
+        .content.color-1 {
+            background-color: #376b50;
+        }
+        .content.color-2 {
+            background-color: #4d9670;
+        }
+        .content.color-3 {
+            background-color: #63c190;
+        }
+        .content.color-4 {
+            background-color: #6ed6a0;
+        }
     </style>
 </head>
 <body>
@@ -166,15 +184,21 @@ This year, our premier tech event, Z3NITH is dedicated to exploring cutting-edge
 Together, let's ignite the spark of innovation and lead the charge towards a sustainable world.</div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const colors = ['#256D4E', '#2E8861', '#4d9670', '#63c190', '#6ed6a0'];
             const content = document.querySelector('.content');
-            
+
             function updateBackgroundColor() {
                 const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
                 const scrollPercentage = window.scrollY / scrollableHeight;
-                const colorIndex = Math.min(Math.floor(scrollPercentage * colors.length), colors.length - 1);
-                const bgColor = colors[colorIndex];
-                content.style.backgroundColor = bgColor;
+
+                if (scrollPercentage < 0.3) {
+                    content.className = 'content color-0';
+                } else if (scrollPercentage < 0.6) {
+                    content.className = 'content color-1';
+                } else if (scrollPercentage < 0.9) {
+                    content.className = 'content color-2';
+                } else {
+                    content.className = 'content color-3';
+                }
             }
             window.addEventListener('scroll', updateBackgroundColor);
             document.addEventListener('DOMContentLoaded', updateBackgroundColor);
