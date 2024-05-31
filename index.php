@@ -163,7 +163,7 @@ This year, our premier tech event, Z3NITH is dedicated to exploring cutting-edge
 Together, let's ignite the spark of innovation and lead the charge towards a sustainable world.</div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const colors = ['#256D4E', '#2E8861', '#4d9670', '#63c190', '#6ed6a0'];
+            const colors = ['#256D4E', '#2E8861', '#4d9670', '#63c190', '#F5F5F5'];
             const content = document.querySelector('.content');
             
             function updateBackgroundColor() {
