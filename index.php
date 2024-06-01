@@ -321,6 +321,53 @@
         .next {
             right: 0;
         }
+        .footer .social a:hover{
+            color: #64729c;
+            transition: color 0.3s;
+        }
+        .footer{
+            border-top: 1px solid black;
+            display: flex;
+            height: 28vh;
+            width: 99vw;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer #fzl{
+            padding-left: 50px;
+            width: 200px;
+            height: 110px;
+        }
+        .footer .location{
+            display: flex;
+            flex-direction: column;
+            text-align: right;  
+            font-family: "source-serif-pro";
+            font-weight: 600;
+            align-items: flex-end;
+        }
+        .footer .location .cr{
+            font-weight: 400 !important;
+        }
+        .footer .social{
+            display: flex;
+            flex-direction: column;
+            font-family: "source-serif-pro";
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.5rem; 
+        }
+        .footer .location .adw{
+            font-size: 1.5rem;
+        }
+        .footer .social a{
+            color: black;
+            text-align: left;   
+        }
+        .footer #fcl{
+            padding-right: 50px;
+            height: 150px;
+        }
     </style>
 </head>
 <body>
@@ -428,6 +475,21 @@
             <span class="dot" onclick="currentSlide(13)"></span>
         </div>
     </div>
+    <div class="footer" style="margin-top: 200px;">
+        <img src="asset/img/Z3NITH24BLACK.png" alt="" id=fzl>
+        <div class="social">
+            <a href="">Instagram</a>
+            <a href="">Email</a>
+            <a href="">YouTube</a>
+            <a href="">LinkedIn</a>
+        </div>
+        <div class="location">
+            <span class="adw">Senior Wing, Air Force Golden Jubilee Institute <br>Subroto Park, New Delhi, Delhi, India - 110010</span>
+            <div class="cr">Copyright Futurz Club 2024 &copy;</div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6312729964648!2d77.14778086508149!3d28.580833082438215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b3b69de44b%3A0x95acaea9e5c00f56!2sAir+Force+Golden+Jubilee+Institute!5e0!3m2!1sen!2sin!4v1565083569386!5m2!1sen!2sin" width="300" height="180" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        <img src="asset/img/unnamed (1) (1).png" alt="" id="fcl">
+    </div>
     <script>
 document.addEventListener('DOMContentLoaded', function () {
     const content = document.querySelector('.content');
@@ -501,7 +563,6 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = 'block';
     dots[slideIndex - 1].classList.add('active');
 
-    // Control visibility of navigation arrows
     prev.style.visibility = (slideIndex === 1) ? 'hidden' : 'visible';
     next.style.visibility = (slideIndex === slides.length) ? 'hidden' : 'visible';
 }
