@@ -178,13 +178,13 @@
             font-family: "source-serif-pro"; 
             font-weight: 700; 
             text-align: center; 
-            
+            opacity: 1;
+            transition: opacity 0.8s;
         }
         .event:hover{
             height: 620px;
         }
         .event .hover-content {
-            display: none; 
             position: absolute; 
             top: 50%; 
             left: 50%; 
@@ -192,6 +192,8 @@
             text-align: center; 
             color: white; 
             width: 360px;
+            opacity: 0;
+            transition: opacity 0.8s;
         }
         .event .hover-content h2{
             font-size: 3rem;
@@ -212,10 +214,10 @@
             font-weight: 400; 
         }
         .event:hover .text-overlay{
-            display: none;
+            opacity: 0;
         }
         .event:hover .hover-content {
-            display: block; 
+            opacity: 1;
         }
         .event .hover-content h2, .event .hover-content p {
             margin: 5px 0; 
