@@ -359,30 +359,30 @@
         </div>
         <div class="row">
             <div class="profile">
-                <img src="asset/img/babya.jpg" alt="Profile 1">
-                <h2>Bhavya Dhariwal</h2>
-                <p>Executive - Tech</p>
-                <p class="des">A passionate gamer, art lover, and classical dancer who embraces technology and cherishes tradition. Organized yet clumsy, she brings creativity to everything she does</p> 
-            </div>
-            <div class="profile">
-                <img src="asset/img/deluluheadboy.jpg" alt="Profile 1">
-                <h2>Maulik Pandey</h2>
-                <p>Executive - Operations</p>
-                <p class="des">Always sleeping with his playlist on the play right beside him; p.s.-don't try to take away his music and bed from him unless you want him mad :)</p> 
-            </div>
-            <div class="profile">
                 <img src="asset/img/kabir.jpg" alt="Profile 1">
                 <h2>Kabir Jhamb</h2>
                 <p>President</p>
                 <p class="des">Des</p> 
             </div>
-        </div>
-        <div class="row">
             <div class="profile">
                 <img src="asset/img/sarthak.jpeg" alt="Profile 1">
                 <h2>Sarthak Singh</h2>
                 <p>Vice President</p>
                 <p class="des">A patient guy. He clicks chrome just once and waits.</p> 
+            </div>
+            <div class="profile">
+                <img src="asset/img/babya.jpg" alt="Profile 1">
+                <h2>Bhavya Dhariwal</h2>
+                <p>Executive - Tech</p>
+                <p class="des">A passionate gamer, art lover, and classical dancer who embraces technology and cherishes tradition. Organized yet clumsy, she brings creativity to everything she does</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile">
+                <img src="asset/img/deluluheadboy.jpg" alt="Profile 1">
+                <h2>Maulik Pandey</h2>
+                <p>Executive - Operations</p>
+                <p class="des">Always sleeping with his playlist on the play right beside him; p.s.-don't try to take away his music and bed from him unless you want him mad :)</p>
             </div>
             <div class="profile">
                 <img src="asset/img/sutta.jpg" alt="Profile 1">
@@ -431,10 +431,10 @@
                 <p class="des">Coffee chords and code... that's all that is.. that's all he is</p> 
             </div>
             <div class="profile">
-                <img src="" alt="Profile 1">
+                <img src="asset/img/shivya.jpg" alt="Profile 1">
                 <h2>Shivya Verma</h2>
                 <p>Alumni (Advisor)</p>
-                <p class="des">Des</p> 
+                <p class="des">A psychology student trying to get her life together</p> 
             </div>
         </div>
         <div class="row">
