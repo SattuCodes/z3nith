@@ -42,6 +42,7 @@
             justify-content: center;
             height: 80.79034028540066vh;
             flex-direction: column;
+            margin-bottom: 200px;
         }
         .showcase img{
             width: 14%;
@@ -106,20 +107,11 @@
             font-weight: 700;
             padding: 80px 60px; 
             position: relative; 
-            font-size: 50px;
+            font-size: 2.6vw;
             z-index: 2; 
             height: 790px;
             background-color: white;
             color: #256D4E;
-        }
-        @media only screen and (max-width: 1500px) and (max-height: 800px){
-            .emo {
-                font-size: 145px;
-                height: 217px;
-                display: flex;
-                flex-direction: column;
-                position: relative;
-            }
         }
         .bgtxt{
             text-transform: uppercase;
@@ -150,8 +142,8 @@
             overflow-y: hidden;
         }
         .event{
-            height: 550px;
-            width: 460px;
+            height: 70vh;
+            width: 27vw;
             margin-right: 150px;
             flex: none;
             z-index: 1;
@@ -174,7 +166,7 @@
             left: 50%; 
             transform: translate(-50%, -50%); 
             color: white; 
-            font-size: 7rem; 
+            font-size: 6.5vw; 
             font-family: "source-serif-pro"; 
             font-weight: 700; 
             text-align: center; 
@@ -182,7 +174,7 @@
             transition: opacity 0.8s;
         }
         .event:hover{
-            height: 620px;
+            height: 75vh;
         }
         .event .hover-content {
             position: absolute; 
@@ -326,10 +318,11 @@
             transition: color 0.3s;
         }
         .footer{
+            overflow: hidden;
             border-top: 1px solid black;
             display: flex;
             height: 28vh;
-            width: 99vw;
+            width: 98vw;
             justify-content: space-between;
             align-items: center;
         }
@@ -355,10 +348,10 @@
             font-family: "source-serif-pro";
             font-weight: 600;
             text-decoration: none;
-            font-size: 1.5rem; 
+            font-size: 1.2vw; 
         }
         .footer .location .adw{
-            font-size: 1.5rem;
+            font-size: 1.2vw;
         }
         .footer .social a{
             color: black;
@@ -524,12 +517,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     changeEmoji();
-    setInterval(changeEmoji, 3000);
-    const treasuryButton = document.getElementById('issuenigga');
-    treasuryButton.addEventListener('click', function () {
-        const treasurySection = document.getElementById('treasury');
-        treasurySection.scrollIntoView({ behavior: 'smooth' });
-    });
 });
 
 let slideIndex = 1;
