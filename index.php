@@ -110,7 +110,7 @@
             font-weight: 700;
             padding: 80px 60px; 
             position: relative; 
-            font-size: 50px;
+            font-size: 2.4vw;
             z-index: 2; 
             height: 790px;
             background-color: #404964;
