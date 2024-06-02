@@ -534,7 +534,18 @@
             const contentHeight = content.offsetHeight;
             const emojis = document.querySelectorAll('.emoji');
             let currentEmojiIndex = 0;
+            window.addEventListener('scroll', function() {
+                const aniDiv = document.querySelector('.ani');
+                const aniHeight = aniDiv.offsetHeight;
+                const scrollY = window.scrollY;
 
+                let opacity = 1;
+                if (scrollY > aniHeight) {
+                    opacity = 1 - ((scrollY - aniHeight) / aniHeight);
+                    if (opacity < 0) opacity = 0;
+                }
+                aniDiv.style.opacity = opacity;
+            });
             function changeEmoji() {
                 emojis.forEach((emoji, index) => {
                     if (index === currentEmojiIndex) {
