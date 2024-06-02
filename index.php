@@ -478,19 +478,19 @@
         <div class="slider">
             <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
             <div class="slides">
-                <img src="asset/img/slide1.jpg" alt="Slide 1">
-                <img src="asset/img/slide2.jpg" alt="Slide 2">
-                <img src="asset/img/slide3.jpg" alt="Slide 3">
-                <img src="asset/img/slide3.jpg" alt="Slide 4">
-                <img src="asset/img/slide3.jpg" alt="Slide 5">
-                <img src="asset/img/slide3.jpg" alt="Slide 6">
-                <img src="asset/img/slide3.jpg" alt="Slide 7">
-                <img src="asset/img/slide3.jpg" alt="Slide 8">
-                <img src="asset/img/slide3.jpg" alt="Slide 9">
-                <img src="asset/img/slide3.jpg" alt="Slide 10">
-                <img src="asset/img/slide3.jpg" alt="Slide 11">
-                <img src="asset/img/slide3.jpg" alt="Slide 12">
-                <img src="asset/img/slide3.jpg" alt="Slide 13">
+                <img src="asset/img/slide1.png" alt="Slide 1">
+                <img src="asset/img/slide2.png" alt="Slide 2">
+                <img src="asset/img/slide3.png" alt="Slide 3">
+                <img src="asset/img/slide3.png" alt="Slide 4">
+                <img src="asset/img/slide3.png" alt="Slide 5">
+                <img src="asset/img/slide3.png" alt="Slide 6">
+                <img src="asset/img/slide3.png" alt="Slide 7">
+                <img src="asset/img/slide3.png" alt="Slide 8">
+                <img src="asset/img/slide3.png" alt="Slide 9">
+                <img src="asset/img/slide3.png" alt="Slide 10">
+                <img src="asset/img/slide3.png" alt="Slide 11">
+                <img src="asset/img/slide3.png" alt="Slide 12">
+                <img src="asset/img/slide3.png" alt="Slide 13">
             </div>
             <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>

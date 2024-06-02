@@ -411,7 +411,7 @@
                 <span>Z3NITH'19 | Trailer</span>
             </div>
             <div class="image" data-video="https://www.youtube.com/embed/JjguhXUWHds">
-                <img src="asset/img/z18.jpg" alt="" style="object-fit: fill;">
+                <img src="asset/img/z18.png" alt="" style="object-fit: fill;">
                 <span>Z3NITH'18 | Trailer</span>
             </div>
             <div class="image" data-video="https://www.youtube.com/embed/V608MMmU0Tk">
