@@ -416,7 +416,7 @@
         </p>
     </div>
     <div class="showcase">
-        <video autoplay loop muted playsinline id="bgVideo">
+        <video autoplay loop muted playsinline poster="asset/img/bg.png" id="bgVideo">
             <source src="asset/img/bg.mp4" type="video/mp4">
         </video>
         <div class="vlo"></div>
