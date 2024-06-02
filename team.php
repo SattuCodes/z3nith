@@ -446,7 +446,7 @@
             </div>
             <div class="profile">
                 <img src="asset/img/raghav.jpeg" alt="">
-                <h2>Raghav Bhaukandi</h2>
+                <h2>Raghav Bahukhandi</h2>
                 <p>Alumni (Advisor)</p>
                 <p class="des">Professional ‘hello world’ printer, does web development sometimes.</p>
             </div>
