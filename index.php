@@ -34,6 +34,7 @@
             font-style: normal;
             text-decoration: underline;
             color: #48D597;
+            text-underline-offset: 3px;
         }
         .update span{
             color: #48D597;

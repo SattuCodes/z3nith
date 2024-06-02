@@ -10,9 +10,12 @@
         #issuenigga{
             font-size: 24px !important;
         }
+        .empty{
+            height: 22vh;
+        }
         .update {
             margin-top: 124.078px;
-            height: 50px;
+            height: 5.5vh;
             background-color: #333333;
             text-align: center;
             display: flex;
@@ -31,16 +34,17 @@
             font-style: normal;
             text-decoration: underline;
             color: #48D597;
+            text-underline-offset: 3px;
         }
         .update span{
             color: #48D597;
-            font-size: 15px;
+            font-size: 0.8vw;
         }
         .showcase{
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 80.79034028540066vh;
+            height: 80.8vh;
             flex-direction: column;
         }
         .showcase img{
@@ -50,19 +54,22 @@
             padding-top: 15px;
             text-transform: uppercase;
             font-family: "Roboto Condensed";
-            font-size: 23px;
+            font-size: 1.2vw;
             padding-bottom: 50px;
+            color: white;
         }
         .vlo {
-            border-left: 3px solid black;
-            height: 200px;
+            border-left: 2px solid white;
+            height: 22vh;
             margin-bottom: 32px;
             margin-right: 130px;
+            color: white;
         }
         .vlt{
-            border-left: 3px solid black;
-            height: 200px;
+            border-left: 2px solid white;
+            height: 22vh;
             margin-left: 40px;
+            color: white;
         }
         .nav-list{
             margin-right: 51px !important;
@@ -75,6 +82,7 @@
             background-color: #f5f5f5;
             position: relative; 
             z-index: 1;
+            transition: opacity 0.3s;
         }
         .ani.fixed {
             position: fixed; 
@@ -111,15 +119,6 @@
             height: 790px;
             background-color: white;
             color: #256D4E;
-        }
-        @media only screen and (max-width: 1500px) and (max-height: 800px){
-            .emo {
-                font-size: 145px;
-                height: 217px;
-                display: flex;
-                flex-direction: column;
-                position: relative;
-            }
         }
         .bgtxt{
             text-transform: uppercase;
@@ -196,7 +195,7 @@
             transition: opacity 0.8s;
         }
         .event .hover-content h2{
-            font-size: 3rem;
+            font-size: 2.5vw;
             font-family: "Lato"; 
             font-weight: 700;
             padding-bottom: 20px;
@@ -206,11 +205,11 @@
             padding-bottom: 50px;
             font-style: italic;
             font-weight: 300; 
-            font-size: 1.3rem;
+            font-size: 1.2vw;
         }
         .event .hover-content .ven{
             font-family: "Lato";
-            font-size: 1.3rem;
+            font-size: 1.2vw;
             font-weight: 400; 
         }
         .event:hover .text-overlay{
@@ -366,10 +365,47 @@
             color: black;
             text-align: left;   
         }
-        .footer #fcl{
+        .footer #fcl {
             padding-right: 50px;
-            height: 10.4vw;
-            width: 15.3vh;
+            height: 15.3vh;
+            width: 10.4vw;
+        }
+        #bgVideo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        :root {
+            --trigger-offset: 190px; 
+        }
+        @media (max-width: 1680px) and (max-height: 1050){
+            :root {
+                --trigger-offset: 170px;
+            }
+        }
+        @media (max-width: 1600px) and(max-height: 900px) {
+            :root {
+                --trigger-offset: 156px;
+            }
+        }
+        @media (max-width: 1366px) and (max-height: 768px) {
+            :root {
+                --trigger-offset: 120px;
+            }
+        }
+        @media (max-width: 1250px) {
+            #bgVideo{
+                display: none; 
+            }
+            .showcase {
+                background-image: url('asset/img/bg.png');
+                background-size: cover;
+                background-position: center;
+            }
         }
     </style>
 </head>
@@ -377,10 +413,13 @@
     <?php include "navigation.html"?>
     <div class="update">
         <p>
-            The Registrations for Z3NITH'24 are open, &nbsp; <a href="">&nbsp;Register Now</a><span> &#10095;</span>
+            The Registrations for Z3NITH'24 are open, &nbsp; &nbsp;<a href="">Register Now</a><span> &#10095;</span>
         </p>
     </div>
     <div class="showcase">
+        <video autoplay loop muted playsinline poster="asset/img/bg.png" id="bgVideo">
+            <source src="asset/img/Z3N.gif" type="video/gif">
+        </video>
         <div class="vlo"></div>
         <img src="asset/img/with 24 (2).png" alt="Z3NITH 24 logo">
         <p class="date">
@@ -390,6 +429,7 @@
         <button onclick=dothat()>BROCHURE</button>
         <div class="vlt"></div>
     </div>
+    <div class="empty"></div>
     <div class="ani" id="ani">
         <img src="asset/img/bg1.png" alt="">
         <div class="emoji" id="emoji-1">🌎</div>
@@ -511,16 +551,25 @@
             const emojis = document.querySelectorAll('.emoji');
             let currentEmojiIndex = 0;
 
+            function getCSSVariableValue(variable) {
+                return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+            }
+
+            let triggerOffset = aniHeight + parseInt(getCSSVariableValue('--trigger-offset'));
+
             window.addEventListener('scroll', function () {
                 const scrollY = window.scrollY;
                 const contentBottom = content.offsetTop + contentHeight;
+                triggerOffset = aniHeight + parseInt(getCSSVariableValue('--trigger-offset'));
 
-                if (scrollY >= aniHeight && scrollY < contentBottom - window.innerHeight) {
+                if (scrollY >= triggerOffset && scrollY < contentBottom - window.innerHeight) {
                     ani.classList.add('fixed');
                     content.style.marginTop = aniHeight + 'px';
+                    ani.style.opacity = Math.max(0, 1 - (scrollY - triggerOffset) / (contentBottom - triggerOffset - window.innerHeight));
                 } else {
                     ani.classList.remove('fixed');
                     content.style.marginTop = '0';
+                    ani.style.opacity = 1;
                 }
             });
 
@@ -534,23 +583,14 @@
                 });
                 currentEmojiIndex = (currentEmojiIndex + 1) % emojis.length;
             }
-
             changeEmoji();
             setInterval(changeEmoji, 3000);
-            const treasuryButton = document.getElementById('issuenigga');
-            treasuryButton.addEventListener('click', function () {
-                const treasurySection = document.getElementById('treasury');
-                treasurySection.scrollIntoView({ behavior: 'smooth' });
-            });
         });
-
         let slideIndex = 1;
         showSlides(slideIndex);
-
         function changeSlide(n) {
             showSlides(slideIndex += n);
         }
-
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
