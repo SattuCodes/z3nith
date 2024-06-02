@@ -74,23 +74,19 @@
         .nav-list{
             margin-right: 51px !important;
         }
-        .ani{
-            height: 90vh;
+        .ani {
+            height: 100vh;
             display: flex;
-            justify-content: center; 
+            justify-content: center;
             align-items: center;
             background-color: #f5f5f5;
-            position: relative; 
-            z-index: 1;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: -1;
             transition: opacity 0.3s;
         }
-        .ani.fixed {
-            position: fixed; 
-            top: 205px; 
-            left: 0; 
-            right: 0; 
-            transform: translateY(-120px);
-        }
+
         .ani img{
             width: 100%;
             height: 100%;
@@ -117,8 +113,8 @@
             font-size: 50px;
             z-index: 2; 
             height: 790px;
-            background-color: white;
-            color: #256D4E;
+            background-color: #64729c;
+            color: white;
         }
         .bgtxt{
             text-transform: uppercase;
@@ -333,6 +329,7 @@
             width: 98vw;
             justify-content: space-between;
             align-items: center;
+            background-color: white;
         }
         .footer #fzl{
             padding-left: 50px;
@@ -379,23 +376,9 @@
             object-fit: cover;
             z-index: -1;
         }
-        :root {
-            --trigger-offset: 190px; 
-        }
-        @media (max-width: 1680px) and (max-height: 1050){
-            :root {
-                --trigger-offset: 170px;
-            }
-        }
-        @media (max-width: 1600px) and(max-height: 900px) {
-            :root {
-                --trigger-offset: 156px;
-            }
-        }
-        @media (max-width: 1366px) and (max-height: 768px) {
-            :root {
-                --trigger-offset: 120px;
-            }
+        .content, .events, .treasury, .footer, .update {
+            position: relative;
+            z-index: 1;
         }
         @media (max-width: 1250px) {
             #bgVideo{
@@ -419,7 +402,7 @@
     <div class="showcase">
         <video autoplay loop muted playsinline poster="asset/img/bg.png" id="bgVideo">
             <source src="asset/img/bg.mp4" type="video/mp4">
-        </video>
+        </video>    
         <div class="vlo"></div>
         <img src="asset/img/with 24 (2).png" alt="Z3NITH 24 logo">
         <p class="date">
@@ -527,7 +510,8 @@
             <span class="dot" onclick="currentSlide(13)"></span>
         </div>
     </div>
-    <div class="footer" style="margin-top: 200px;">
+    <div class="emp" style="background-color: white; height: 200px;"></div>
+    <div class="footer">
         <img src="asset/img/Z3NITH24BLACK.png" alt="" id=fzl>
         <div class="social">
             <a href="">Instagram</a>
@@ -550,28 +534,6 @@
             const contentHeight = content.offsetHeight;
             const emojis = document.querySelectorAll('.emoji');
             let currentEmojiIndex = 0;
-
-            function getCSSVariableValue(variable) {
-                return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
-            }
-
-            let triggerOffset = aniHeight + parseInt(getCSSVariableValue('--trigger-offset'));
-
-            window.addEventListener('scroll', function () {
-                const scrollY = window.scrollY;
-                const contentBottom = content.offsetTop + contentHeight;
-                triggerOffset = aniHeight + parseInt(getCSSVariableValue('--trigger-offset'));
-
-                if (scrollY >= triggerOffset && scrollY < contentBottom - window.innerHeight) {
-                    ani.classList.add('fixed');
-                    content.style.marginTop = aniHeight + 'px';
-                    ani.style.opacity = Math.max(0, 1 - (scrollY - triggerOffset) / (contentBottom - triggerOffset - window.innerHeight));
-                } else {
-                    ani.classList.remove('fixed');
-                    content.style.marginTop = '0';
-                    ani.style.opacity = 1;
-                }
-            });
 
             function changeEmoji() {
                 emojis.forEach((emoji, index) => {
