@@ -5,365 +5,370 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z3NITH'24</title>
     <style>
+        @import url('https://use.typekit.net/gdz2chs.css');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        #issuenigga{
+            font-size: 24px !important;
+        }
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-y: hidden;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-y: hidden;
+        }
 
-.content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    margin-top: 140px;
-    height: auto;
-}
+        .content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-top: 140px;
+            height: auto;
+        }
 
-.player {
-    width: auto;
-    height: 100%;
-    padding: 0;
-    margin-left: 108px;
-    margin-right: 60px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    margin-bottom: 64px;
-    overflow: hidden;
-}
+        .player {
+            width: auto;
+            height: 100%;
+            padding: 0;
+            margin-left: 108px;
+            margin-right: 60px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-bottom: 64px;
+            overflow: hidden;
+        }
 
-#videoPlayer {
-    width: 1140px;
-    height: 600px;
-}
+        #videoPlayer {
+            width: 1140px;
+            height: 600px;
+        }
 
-.click {
-    margin-right: 70px;
-    width: 80vh;
-    height: 80vh;
-    padding-right: 30px;
-    padding-left: 10px; 
-    overflow-y: auto;
-    overflow-x: auto; 
-    direction: rtl; 
-    scrollbar-width: thin;
-    scrollbar-color: #32caf0 #00000091; 
-    display: flex;
-    flex-direction: column;
-}
+        .click {
+            margin-right: 70px;
+            width: 80vh;
+            height: 80vh;
+            padding-right: 30px;
+            padding-left: 10px; 
+            overflow-y: auto;
+            overflow-x: auto; 
+            direction: rtl; 
+            scrollbar-width: thin;
+            scrollbar-color: #32caf0 #00000091; 
+            display: flex;
+            flex-direction: column;
+        }
 
-.click img {
-    height: 264px;
-    width: 455px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    direction: ltr;
-    object-fit: cover;
-    opacity: 100%;
-}
+        .click img {
+            height: 264px;
+            width: 455px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            direction: ltr;
+            object-fit: cover;
+            opacity: 100%;
+        }
 
-.image {
-    min-height: 400px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-bottom: 80px;
-    overflow: hidden;
-}
+        .image {
+            min-height: 400px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin-bottom: 80px;
+            overflow: hidden;
+        }
 
-.image span {
-    padding-top: 10px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: #64729C;
-    font-size: 25px;
-    padding-bottom: 24px;
-}
+        .image span {
+            padding-top: 10px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            color: #64729C;
+            font-size: 25px;
+            padding-bottom: 24px;
+        }
 
-.image.active {
-    background-color: rgba(207, 222, 255, 0.5);
-}
+        .image.active {
+            background-color: rgba(207, 222, 255, 0.5);
+        }
 
-.empty-image {
-    display: none;
-}
+        .empty-image {
+            display: none;
+        }
 
-@media only screen and (max-height: 770px) {
-    #videoPlayer {
-        width: 1140px;
-        height: 75vh;
-        max-height: 770px;
-    }
-}
+        @media only screen and (max-height: 770px) {
+            #videoPlayer {
+                width: 1140px;
+                height: 75vh;
+                max-height: 770px;
+            }
+        }
 
-@media only screen and (max-width: 1310px) and (min-width: 587px) {
-    #videoPlayer {
-        width: 100%;
-        max-width: 1310px;
-        height: 450px;
-    }
+        @media only screen and (max-width: 1310px) and (min-width: 587px) {
+            #videoPlayer {
+                width: 100%;
+                max-width: 1310px;
+                height: 450px;
+            }
 
-    .player {
-        width: 100%;
-        max-width: 1310px;
-        height: 450px;
-        margin: 0;
-    }
+            .player {
+                width: 100%;
+                max-width: 1310px;
+                height: 450px;
+                margin: 0;
+            }
 
-    .content {
-        display: flex;
-        flex-direction: column;
-    }
+            .content {
+                display: flex;
+                flex-direction: column;
+            }
 
-    .click {
-        margin-top: 30px;
-        margin-right: 0;
-        padding: 0;
-        width: 100%;
-        display: grid;
-        grid-auto-flow: column;
-        height: 23vh;
-        grid-auto-columns: 40%;
-        direction: ltr;
-        gap: 11rem;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        scrollbar-color: initial;
-    }
+            .click {
+                margin-top: 30px;
+                margin-right: 0;
+                padding: 0;
+                width: 100%;
+                display: grid;
+                grid-auto-flow: column;
+                height: 23vh;
+                grid-auto-columns: 40%;
+                direction: ltr;
+                gap: 11rem;
+                scroll-snap-type: x mandatory;
+                scrollbar-width: none;
+                scrollbar-color: initial;
+            }
 
-    .image {
-        min-height: 153px;
-        scroll-snap-align: center;
-        padding: 0;
-        margin: 0;
-    }
+            .image {
+                min-height: 153px;
+                scroll-snap-align: center;
+                padding: 0;
+                margin: 0;
+            }
 
-    .image span {
-        padding: 0;
-    }
-}
+            .image span {
+                padding: 0;
+            }
+        }
 
-@media only screen and (max-width: 586px) {
-    #videoPlayer {
-        width: 100%;
-        max-width: 1310px;
-        height: 450px;
-    }
+        @media only screen and (max-width: 586px) {
+            #videoPlayer {
+                width: 100%;
+                max-width: 1310px;
+                height: 450px;
+            }
 
-    .player {
-        width: 100%;
-        max-width: 1310px;
-        height: 450px;
-        margin: 0;
-    }
+            .player {
+                width: 100%;
+                max-width: 1310px;
+                height: 450px;
+                margin: 0;
+            }
 
-    .content {
-        display: flex;
-        flex-direction: column;
-    }
+            .content {
+                display: flex;
+                flex-direction: column;
+            }
 
-    .click {
-        margin-top: 30px;
-        margin-right: 0;
-        padding: 0;
-        width: 100%;
-        display: grid;
-        grid-auto-flow: column;
-        height: 27vh;
-        direction: ltr;
-        gap: 11rem;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        scrollbar-color: initial;
-        overflow-y: hidden;
-    }
+            .click {
+                margin-top: 30px;
+                margin-right: 0;
+                padding: 0;
+                width: 100%;
+                display: grid;
+                grid-auto-flow: column;
+                height: 27vh;
+                direction: ltr;
+                gap: 11rem;
+                scroll-snap-type: x mandatory;
+                scrollbar-width: none;
+                scrollbar-color: initial;
+                overflow-y: hidden;
+            }
 
-    .image {
-        min-height: 190px;
-        scroll-snap-align: center;
-        padding: 0;
-        margin: 0;
-    }
+            .image {
+                min-height: 190px;
+                scroll-snap-align: center;
+                padding: 0;
+                margin: 0;
+            }
 
-    .image span {
-        padding: 0;
-        font-size: 19px;
-    }
-}
+            .image span {
+                padding: 0;
+                font-size: 19px;
+            }
+        }
 
-@media only screen and (max-height: 752px) and (max-width: 1310px) {
-    #videoPlayer {
-        width: 100%;
-        max-width: 1310px;
-        height: 370px;
-    }
-    .player {
-        width: 100%;
-        max-width: 1310px;
-        height: 400px;
-        margin: 0;
-    }
-    .click{
-        overflow-y: hidden;
-    }
-}
-@media only screen and (max-height: 673px) and (max-width: 1310px) {
-    #videoPlayer {
-        width: 100%;
-        max-width: 1310px;
-        height: 320px;
-    }
-    .player {
-        width: 100%;
-        max-width: 1310px;
-        height: 320px;
-        margin: 0;
-    }
-    .click{
-        overflow-y: hidden;
-    }
-}
-@media only screen and (max-width: 1700px) {
-    .click img{
-        width: 400px;
-    }
-    
-}
-@media only screen and (max-width: 1600px) {
-    .click img{
-        width: 350px;
-        height: 225px;
-    }
-    .image{
-        min-height: 350px;
-    }
-}
+        @media only screen and (max-height: 752px) and (max-width: 1310px) {
+            #videoPlayer {
+                width: 100%;
+                max-width: 1310px;
+                height: 370px;
+            }
+            .player {
+                width: 100%;
+                max-width: 1310px;
+                height: 400px;
+                margin: 0;
+            }
+            .click{
+                overflow-y: hidden;
+            }
+        }
+        @media only screen and (max-height: 673px) and (max-width: 1310px) {
+            #videoPlayer {
+                width: 100%;
+                max-width: 1310px;
+                height: 320px;
+            }
+            .player {
+                width: 100%;
+                max-width: 1310px;
+                height: 320px;
+                margin: 0;
+            }
+            .click{
+                overflow-y: hidden;
+            }
+        }
+        @media only screen and (max-width: 1700px) {
+            .click img{
+                width: 400px;
+            }
+            
+        }
+        @media only screen and (max-width: 1600px) {
+            .click img{
+                width: 350px;
+                height: 225px;
+            }
+            .image{
+                min-height: 350px;
+            }
+        }
 
-@media only screen and (max-width: 1500px) {
-    .click img {
-        width: 258px;
-        height: 185px;
-    }
-    .image{
-        min-height: 270px;
-    }
-}
-@media only screen and (max-width: 1400px) and (max-height: 730px){
-    .click img{
-        width: 230px;
-        height: 130px;
-    }
-    .image{
-        min-height: 200px;
-    }
-}
-@media only screen and (max-height: 800px) {
-    .click img{
-        height: 144px;
-    }
-}
-@media only screen and (max-height: 800px) {
-    .click img{
-        height: 17vh;
-    }
-}
-@media only screen and (max-height: 784px) {
-    .click img{
-        height: 13vh;
-    }
-}
+        @media only screen and (max-width: 1500px) {
+            .click img {
+                width: 258px;
+                height: 185px;
+            }
+            .image{
+                min-height: 270px;
+            }
+        }
+        @media only screen and (max-width: 1400px) and (max-height: 730px){
+            .click img{
+                width: 230px;
+                height: 130px;
+            }
+            .image{
+                min-height: 200px;
+            }
+        }
+        @media only screen and (max-height: 800px) {
+            .click img{
+                height: 144px;
+            }
+        }
+        @media only screen and (max-height: 800px) {
+            .click img{
+                height: 17vh;
+            }
+        }
+        @media only screen and (max-height: 784px) {
+            .click img{
+                height: 13vh;
+            }
+        }
 
-@media only screen and (max-width: 1600px) and (min-height: 900px) {
-    .click img {
-        height: 190px;
-        width: 310px;
-    }
-    .image {
-        min-height: 293px;
-    }
-}
+        @media only screen and (max-width: 1600px) and (min-height: 900px) {
+            .click img {
+                height: 190px;
+                width: 310px;
+            }
+            .image {
+                min-height: 293px;
+            }
+        }
 
 
-@media only screen and (max-width: 1440px) and (max-height: 830px) {
-    .click img {
-        height: 150px;
-        width: 304px;
-    }
-    .image {
-        min-height: 250px;
-    }
-}
-@media only screen and (max-width: 1440px) and (max-height: 799px) {
-    .click img {
-        height: 120px;
-        width: 195px;
-    }
-    .image {
-        min-height: 293px;
-    }
-}
-@media only screen and (max-width: 1440px) and (max-height: 770px) {
-    .click img {
-        height: 107px;
-        width: 188px;
-    }
-    .image {
-        min-height: 293px;
-    }
-}
-@media only screen and (max-width: 1440px) and (max-height: 770px) {
-    .click img {
-        height: 90px;
-        width: 170px;
-    }
-    .image {
-        min-height: 293px;
-    }
-}
-@media only screen and (max-width: 1440px) and (max-height: 695px) {
-    .click img {
-        height: 182px;
-        width: 255px;
-    }
-    .image {
-        min-height: 215px;
-    }
-}
-@media only screen and (min-width: 1440px) and (max-height: 731px) {
-    .click img {
-        height: 190px;
-        width: 304px;
-    }
-    .image {
-        min-height: 293px;
-    }
-}
-@media only screen and (min-width: 1400px) and (max-height: 800px) {
-    .click img {
-        width: 230px;
-        height: 140px;
-    }
-    .image {
-        min-height: 240px;
-    }
-}
-@media only screen and (min-width: 1349px) and (max-height: 599px) {
-    .click img {
-        height: 155px;
-        width: 245px;
-    }
-    .image {
-        min-height: 228px;
-    }
-    .image span{
-        font-size: 18px;
-    }
+        @media only screen and (max-width: 1440px) and (max-height: 830px) {
+            .click img {
+                height: 150px;
+                width: 304px;
+            }
+            .image {
+                min-height: 250px;
+            }
+        }
+        @media only screen and (max-width: 1440px) and (max-height: 799px) {
+            .click img {
+                height: 120px;
+                width: 195px;
+            }
+            .image {
+                min-height: 293px;
+            }
+        }
+        @media only screen and (max-width: 1440px) and (max-height: 770px) {
+            .click img {
+                height: 107px;
+                width: 188px;
+            }
+            .image {
+                min-height: 293px;
+            }
+        }
+        @media only screen and (max-width: 1440px) and (max-height: 770px) {
+            .click img {
+                height: 90px;
+                width: 170px;
+            }
+            .image {
+                min-height: 293px;
+            }
+        }
+        @media only screen and (max-width: 1440px) and (max-height: 695px) {
+            .click img {
+                height: 182px;
+                width: 255px;
+            }
+            .image {
+                min-height: 215px;
+            }
+        }
+        @media only screen and (min-width: 1440px) and (max-height: 731px) {
+            .click img {
+                height: 190px;
+                width: 304px;
+            }
+            .image {
+                min-height: 293px;
+            }
+        }
+        @media only screen and (min-width: 1400px) and (max-height: 800px) {
+            .click img {
+                width: 230px;
+                height: 140px;
+            }
+            .image {
+                min-height: 240px;
+            }
+        }
+        @media only screen and (min-width: 1349px) and (max-height: 599px) {
+            .click img {
+                height: 155px;
+                width: 245px;
+            }
+            .image {
+                min-height: 228px;
+            }
+            .image span{
+                font-size: 18px;
+            }
 
-}
+        }
     </style>
 </head>
 <body>

@@ -10,9 +10,12 @@
         #issuenigga{
             font-size: 24px !important;
         }
+        .empty{
+            height: 22vh;
+        }
         .update {
             margin-top: 124.078px;
-            height: 50px;
+            height: 5.5vh;
             background-color: #333333;
             text-align: center;
             display: flex;
@@ -34,15 +37,14 @@
         }
         .update span{
             color: #48D597;
-            font-size: 15px;
+            font-size: 0.8vw;
         }
         .showcase{
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 80.79034028540066vh;
+            height: 80.8vh;
             flex-direction: column;
-            margin-bottom: 200px;
         }
         .showcase img{
             width: 14%;
@@ -51,19 +53,22 @@
             padding-top: 15px;
             text-transform: uppercase;
             font-family: "Roboto Condensed";
-            font-size: 23px;
+            font-size: 1.2vw;
             padding-bottom: 50px;
+            color: white;
         }
         .vlo {
-            border-left: 3px solid black;
-            height: 200px;
+            border-left: 2px solid white;
+            height: 22vh;
             margin-bottom: 32px;
             margin-right: 130px;
+            color: white;
         }
         .vlt{
-            border-left: 3px solid black;
-            height: 200px;
+            border-left: 2px solid white;
+            height: 22vh;
             margin-left: 40px;
+            color: white;
         }
         .nav-list{
             margin-right: 51px !important;
@@ -107,7 +112,7 @@
             font-weight: 700;
             padding: 80px 60px; 
             position: relative; 
-            font-size: 2.6vw;
+            font-size: 50px;
             z-index: 2; 
             height: 790px;
             background-color: white;
@@ -142,8 +147,8 @@
             overflow-y: hidden;
         }
         .event{
-            height: 70vh;
-            width: 27vw;
+            height: 65vh;
+            width: 25vw;
             margin-right: 150px;
             flex: none;
             z-index: 1;
@@ -174,7 +179,7 @@
             transition: opacity 0.8s;
         }
         .event:hover{
-            height: 75vh;
+            height: 70vh;
         }
         .event .hover-content {
             position: absolute; 
@@ -188,7 +193,7 @@
             transition: opacity 0.8s;
         }
         .event .hover-content h2{
-            font-size: 3rem;
+            font-size: 2.5vw;
             font-family: "Lato"; 
             font-weight: 700;
             padding-bottom: 20px;
@@ -198,11 +203,11 @@
             padding-bottom: 50px;
             font-style: italic;
             font-weight: 300; 
-            font-size: 1.3rem;
+            font-size: 1.2vw;
         }
         .event .hover-content .ven{
             font-family: "Lato";
-            font-size: 1.3rem;
+            font-size: 1.2vw;
             font-weight: 400; 
         }
         .event:hover .text-overlay{
@@ -313,6 +318,7 @@
         .next {
             right: 0;
         }
+
         .footer .social a:hover{
             color: #64729c;
             transition: color 0.3s;
@@ -328,8 +334,8 @@
         }
         .footer #fzl{
             padding-left: 50px;
-            width: 200px;
-            height: 110px;
+            width: 10.4vw;
+            height: 15.3vh;
         }
         .footer .location{
             display: flex;
@@ -357,9 +363,29 @@
             color: black;
             text-align: left;   
         }
-        .footer #fcl{
+        .footer #fcl {
             padding-right: 50px;
-            height: 150px;
+            height: 15.3vh;
+            width: 10.4vw;
+        }
+        #bgVideo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        @media (max-width: 1250px) {
+            #bgVideo{
+                display: none; 
+            }
+            .showcase {
+                background-image: url('asset/img/bg.png');
+                background-size: cover;
+                background-position: center;
+            }
         }
     </style>
 </head>
@@ -371,6 +397,9 @@
         </p>
     </div>
     <div class="showcase">
+        <video autoplay loop muted playsinline id="bgVideo">
+            <source src="asset/img/bg.mp4" type="video/mp4">
+        </video>
         <div class="vlo"></div>
         <img src="asset/img/with 24 (2).png" alt="Z3NITH 24 logo">
         <p class="date">
@@ -380,6 +409,7 @@
         <button onclick=dothat()>BROCHURE</button>
         <div class="vlt"></div>
     </div>
+    <div class="empty"></div>
     <div class="ani" id="ani">
         <img src="asset/img/bg1.png" alt="">
         <div class="emoji" id="emoji-1">🌎</div>
@@ -428,6 +458,15 @@
                     <h2 style="color: #86917D;">Keynote</h2>
                     <p class="tag">Kreation of New Age</p>
                     <p class="ven">Hybrid - Team of 2 <br> JR. COMPUTER LAB</p>    
+                </div>
+            </div>
+            <div class="event">
+                <img src="asset/img/5.png" alt="">
+                <div class="text-overlay">5</div>
+                <div class="hover-content">
+                    <h2 style="color: #86917D;">sp xyz</h2>
+                    <p class="tag">zxy</p>
+                    <p class="ven">y</p>    
                 </div>
             </div>
         </div>
@@ -484,76 +523,72 @@
         <img src="asset/img/unnamed (1) (1).png" alt="" id="fcl">
     </div>
     <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const content = document.querySelector('.content');
-    const ani = document.getElementById('ani');
-    const aniHeight = ani.offsetHeight;
-    const contentHeight = content.offsetHeight;
-    const emojis = document.querySelectorAll('.emoji');
-    let currentEmojiIndex = 0;
+        document.addEventListener('DOMContentLoaded', function () {
+            const content = document.querySelector('.content');
+            const ani = document.getElementById('ani');
+            const aniHeight = ani.offsetHeight;
+            const contentHeight = content.offsetHeight;
+            const emojis = document.querySelectorAll('.emoji');
+            let currentEmojiIndex = 0;
 
-    window.addEventListener('scroll', function () {
-        const scrollY = window.scrollY;
-        const contentBottom = content.offsetTop + contentHeight;
+            window.addEventListener('scroll', function () {
+                const scrollY = window.scrollY;
+                const contentBottom = content.offsetTop + contentHeight;
+                const triggerOffset = aniHeight + 190; 
 
-        if (scrollY >= aniHeight && scrollY < contentBottom - window.innerHeight) {
-            ani.classList.add('fixed');
-            content.style.marginTop = aniHeight + 'px';
-        } else {
-            ani.classList.remove('fixed');
-            content.style.marginTop = '0';
-        }
-    });
-
-    function changeEmoji() {
-        emojis.forEach((emoji, index) => {
-            if (index === currentEmojiIndex) {
-                emoji.classList.add('visible');
-            } else {
-                emoji.classList.remove('visible');
+                if (scrollY >= triggerOffset && scrollY < contentBottom - window.innerHeight) {
+                    ani.classList.add('fixed');
+                    content.style.marginTop = aniHeight + 'px';
+                } else {
+                    ani.classList.remove('fixed');
+                    content.style.marginTop = '0';
+                }
+            });
+            function changeEmoji() {
+                emojis.forEach((emoji, index) => {
+                    if (index === currentEmojiIndex) {
+                        emoji.classList.add('visible');
+                    } else {
+                        emoji.classList.remove('visible');
+                    }
+                });
+                currentEmojiIndex = (currentEmojiIndex + 1) % emojis.length;
             }
+
+            changeEmoji();
+            setInterval(changeEmoji, 3000);
         });
-        currentEmojiIndex = (currentEmojiIndex + 1) % emojis.length;
-    }
 
-    changeEmoji();
-});
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-let slideIndex = 1;
-showSlides(slideIndex);
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
 
-function changeSlide(n) {
-    showSlides(slideIndex += n);
-}
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            let i;
+            const slides = document.querySelector('.slides').children;
+            const dots = document.querySelectorAll('.dot');
+            const prev = document.querySelector('.prev');
+            const next = document.querySelector('.next');
+            if (n > slides.length) { slideIndex = slides.length }
+            if (n < 1) { slideIndex = 1 }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('active');
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            dots[slideIndex - 1].classList.add('active');
+            prev.style.visibility = (slideIndex === 1) ? 'hidden' : 'visible';
+            next.style.visibility = (slideIndex === slides.length) ? 'hidden' : 'visible';
+        }
+    </script>
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let i;
-    const slides = document.querySelector('.slides').children;
-    const dots = document.querySelectorAll('.dot');
-    const prev = document.querySelector('.prev');
-    const next = document.querySelector('.next');
-
-    if (n > slides.length) { slideIndex = slides.length }
-    if (n < 1) { slideIndex = 1 }
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove('active');
-    }
-
-    slides[slideIndex - 1].style.display = 'block';
-    dots[slideIndex - 1].classList.add('active');
-
-    prev.style.visibility = (slideIndex === 1) ? 'hidden' : 'visible';
-    next.style.visibility = (slideIndex === slides.length) ? 'hidden' : 'visible';
-}
-</script>
-
-</body>
+</body> 
 </html>

@@ -362,7 +362,7 @@
                 <img src="asset/img/kabir.jpg" alt="Profile 1">
                 <h2>Kabir Jhamb</h2>
                 <p>President</p>
-                <p class="des">Des</p> 
+                <p class="des">An avid gamer and caffeine aficionado, he is always fueled for action, whether it's on the screen or cheering for his favorite teams in football, basketball, or F1 races.</p> 
             </div>
             <div class="profile">
                 <img src="asset/img/sarthak.jpeg" alt="Profile 1">
