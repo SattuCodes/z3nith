@@ -34,7 +34,7 @@
             font-style: normal;
             text-decoration: underline;
             color: #48D597;
-            text-underline-offset: 3px;
+            text-underline-offset: 5px;
         }
         .update span{
             color: #48D597;
@@ -113,7 +113,7 @@
             font-size: 50px;
             z-index: 2; 
             height: 790px;
-            background-color: #64729c;
+            background-color: #404964;
             color: white;
         }
         .bgtxt{
