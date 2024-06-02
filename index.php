@@ -377,6 +377,24 @@
             object-fit: cover;
             z-index: -1;
         }
+        :root {
+            --trigger-offset: 190px; 
+        }
+        @media (max-width: 1680px) and (max-height: 1050){
+            :root {
+                --trigger-offset: 170px;
+            }
+        }
+        @media (max-width: 1600px) and(max-height: 900px) {
+            :root {
+                --trigger-offset: 156px;
+            }
+        }
+        @media (max-width: 1366px) and (max-height: 768px) {
+            :root {
+                --trigger-offset: 120px;
+            }
+        }
         @media (max-width: 1250px) {
             #bgVideo{
                 display: none; 
@@ -530,12 +548,14 @@
             const contentHeight = content.offsetHeight;
             const emojis = document.querySelectorAll('.emoji');
             let currentEmojiIndex = 0;
-
+            function getCSSVariableValue(variable) {
+                return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+            }
+            let triggerOffset = aniHeight + parseInt(getCSSVariableValue('--trigger-offset'));
             window.addEventListener('scroll', function () {
                 const scrollY = window.scrollY;
                 const contentBottom = content.offsetTop + contentHeight;
-                const triggerOffset = aniHeight + 190; 
-
+                triggerOffset = aniHeight + parseInt(getCSSVariableValue('--trigger-offset'));
                 if (scrollY >= triggerOffset && scrollY < contentBottom - window.innerHeight) {
                     ani.classList.add('fixed');
                     content.style.marginTop = aniHeight + 'px';
@@ -554,18 +574,14 @@
                 });
                 currentEmojiIndex = (currentEmojiIndex + 1) % emojis.length;
             }
-
             changeEmoji();
             setInterval(changeEmoji, 3000);
         });
-
         let slideIndex = 1;
         showSlides(slideIndex);
-
         function changeSlide(n) {
             showSlides(slideIndex += n);
         }
-
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
