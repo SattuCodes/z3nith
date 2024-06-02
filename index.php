@@ -412,7 +412,7 @@
     <?php include "navigation.html"?>
     <div class="update">
         <p>
-            The Registrations for Z3NITH'24 are open, &nbsp; <a href="">&nbsp;Register Now</a><span> &#10095;</span>
+            The Registrations for Z3NITH'24 are open, &nbsp; &nbsp;<a href="">Register Now</a><span> &#10095;</span>
         </p>
     </div>
     <div class="showcase">
