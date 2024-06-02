@@ -81,6 +81,7 @@
             background-color: #f5f5f5;
             position: relative; 
             z-index: 1;
+            transition: opacity 0.3s;
         }
         .ani.fixed {
             position: fixed; 
@@ -548,22 +549,29 @@
             const contentHeight = content.offsetHeight;
             const emojis = document.querySelectorAll('.emoji');
             let currentEmojiIndex = 0;
+
             function getCSSVariableValue(variable) {
                 return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
             }
+
             let triggerOffset = aniHeight + parseInt(getCSSVariableValue('--trigger-offset'));
+
             window.addEventListener('scroll', function () {
                 const scrollY = window.scrollY;
                 const contentBottom = content.offsetTop + contentHeight;
                 triggerOffset = aniHeight + parseInt(getCSSVariableValue('--trigger-offset'));
+
                 if (scrollY >= triggerOffset && scrollY < contentBottom - window.innerHeight) {
                     ani.classList.add('fixed');
                     content.style.marginTop = aniHeight + 'px';
+                    ani.style.opacity = Math.max(0, 1 - (scrollY - triggerOffset) / (contentBottom - triggerOffset - window.innerHeight));
                 } else {
                     ani.classList.remove('fixed');
                     content.style.marginTop = '0';
+                    ani.style.opacity = 1;
                 }
             });
+
             function changeEmoji() {
                 emojis.forEach((emoji, index) => {
                     if (index === currentEmojiIndex) {
