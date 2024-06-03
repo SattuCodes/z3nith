@@ -348,10 +348,10 @@
                 <img src="asset/img/prajwal.png" alt="Profile 2">
                 <h2>Prajwal</h2>
                 <p>Mentor Coordinator</p>
-                <p class="des">des</p> 
+                <p class="des">A developer and skill collector.</p> 
             </div>
             <div class="profile">
-                <img src="asset/img/abhinavnew.png" alt="Profile 3">
+                <img src="asset/img/Abhinavnew.png" alt="Profile 3">
                 <h2>Abhinav Mishra</h2>
                 <p>PR Head</p>
                 <p class="des">Spending half his life Rotoscoping water, one mask at a time.</p>

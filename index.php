@@ -110,7 +110,7 @@
             font-weight: 700;
             padding: 80px 60px; 
             position: relative; 
-            font-size: 2.4vw;
+            font-size: 3vw;
             z-index: 2; 
             height: 790px;
             background-color: #404964;
@@ -223,15 +223,15 @@
             font-size: 14px;
             border: none;
             border-radius: 100px;
-            width: 160px;
-            height: 63px;
+            width: 8.3vw;
+            height: 6.9vh;
             margin-bottom: 30px;
             background-color: #ffff;
-            color: #6376b0;
+            color: #404964;
         }
         .showcase button:hover{
             transition: all 0.3s;
-            background-color: #6376b0;
+            background-color: #404964;
             color: #ffff;
         }
         .scrollable-content::-webkit-scrollbar {
@@ -396,7 +396,7 @@
     <?php include "navigation.html"?>
     <div class="update">
         <p>
-            The Registrations for Z3NITH'24 are open, &nbsp; &nbsp;<a href="">Register Now</a><span> &#10095;</span>
+            The Registrations for Z3NITH'24 are open, &nbsp; &nbsp;<a href="">Register Now</a><span> &nbsp;&nbsp;&#10095;</span>
         </p>
     </div>
     <div class="showcase">
