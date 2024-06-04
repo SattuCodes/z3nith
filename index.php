@@ -124,13 +124,16 @@
             font-weight: 700;
             z-index: 0;
             position: absolute;
-            top: 50%;
             left: 150px;
-            transform: translateY(-50%);
+        }
+        .eve{
+            background-color: #1e1e1e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .events{
             height: 86vh;
-            background-color: #1e1e1e;
             display: flex;
             align-items: center;
             position: relative;
@@ -146,7 +149,7 @@
         }
         .event{
             height: 65vh;
-            width: 25vw;
+            width: 22vw;
             margin-right: 150px;
             flex: none;
             z-index: 1;
@@ -220,7 +223,7 @@
         .showcase button{
             font-family: "Lato";
             font-weight: 600;
-            font-size: 14px;
+            font-size: 0.72vw;
             border: none;
             border-radius: 100px;
             width: 8.3vw;
@@ -333,8 +336,8 @@
         }
         .footer #fzl{
             padding-left: 50px;
-            width: 10.4vw;
-            height: 15.3vh;
+            width: 11.4vw;
+            height: 12.3vh;
         }
         .footer .location{
             display: flex;
@@ -365,7 +368,7 @@
         .footer #fcl {
             padding-right: 50px;
             height: 15.3vh;
-            width: 10.4vw;
+            width: 11.4vw;
         }
         #bgVideo{
             position: absolute;
@@ -388,6 +391,218 @@
                 background-image: url('asset/img/bg.png');
                 background-size: cover;
                 background-position: center;
+            }
+        }
+        @media (max-width: 1366px) and (max-height: 768px) {
+            .showcase button{
+                height: 12vh;
+                font-size: 0.8vw;
+            }
+        }
+        @media (max-height: 700px){
+            .footer iframe{
+                height: 135px;
+                width: 300px;
+            }
+        }
+        @media (max-width: 912px) and (max-height: 1368px){
+            .slider{
+                width: 100%;
+            }
+            .slides img{
+                width: 100vw;
+                height: 37vh;
+            }
+            .prev, .next{
+                color: #f5f5f5;
+                font-size: 80px;
+            }
+            .next{
+                margin-right: 45px;
+            }
+            .prev{
+                margin-left: 45px;
+            }
+            .footer{
+                height: 15vh;
+            }
+            .footer #fzl {
+                padding-left: 0;
+                width: 10.4vw;
+                height: 5.3vh;
+            }
+            .footer #fcl {
+                padding-right: 0px;
+                height: 8vh;
+                width: 10.4vw;
+            }
+            .footer iframe{
+                height: 100px;
+                width: 225px;
+            }
+            .footer .location .cr{
+                font-size: 1.2vw;
+            }
+            .treasury{
+                height: 60vh;
+            }
+            .dots{
+                padding-bottom: 90px;
+            }
+            .events{
+                height: 70vh;
+            }
+            .bgtxt{ 
+                left: inherit;
+                text-align: center;
+            }
+            .scrollable-content{
+                padding-left: 930px;
+            }
+            .event {
+                height: 45vh;
+                width: 45vw;
+            }
+            .event:hover{
+                height: 50vh;
+            }
+            .event .hover-content h2 {
+                font-size: 5.3vw;
+            }
+            .event .hover-content .tag{
+                font-size: 2.2vw;
+            }
+            .event .hover-content .ven{
+                font-size: 2.2vw;
+            }
+            .content{
+                font-size: 4vw;
+            }
+            .ani .emoji{
+                font-size: 25vw;
+            }
+            .showcase{
+                height: 68vh;
+            }
+            .showcase button{
+                font-size: 0.83vw;
+                width: 9.3vw;
+                height: 2.5vh;
+            }
+        }
+        @media (max-width: 450px) and (max-height: 950px) {
+            .slides img{
+                object-fit: fill;
+            }
+            .prev, .next{
+                font-size: 45px;
+            }
+            .prev{
+                margin-left: 5px;
+            }
+            .next{
+                margin-right: 5px;
+            }
+            .footer{
+                height: 72vh;
+                width: 100vw;
+                flex-direction: column;
+            }
+            .footer .social{
+                align-items: center;
+                font-size: 4.5vw;
+                margin-bottom: 20px;
+            }
+            .footer .location{
+                text-align: center;
+                align-items: center;
+                order: 1;
+            }
+            .footer .location .adw{
+                font-size: 3vw;
+            }
+            .footer .location .cr{
+                font-size: 2.5vw;
+            }
+            .footer #fzl{
+                margin-top: 20px;
+                width: 18.4vw;
+                    height: 7.3vh;
+                margin-bottom: 20px;
+            }
+            .footer #fcl{
+                order: 4;
+                height: 8vh;
+                width: 14.4vw;
+                margin-bottom: 10px;
+                margin-top: 30px;
+            }
+            .emp{
+                height: 50px !important;
+            }
+            .dots{
+                padding-bottom: 60px;
+            }
+            .gloc{
+                order: 0;
+            }
+            .event {
+                height: 45vh;
+                width: 60vw;
+            }
+            .scrollable-content {
+                padding-left: 630px;
+            }
+            .footer iframe {
+                height: 140px;
+                width: 300px;
+            }
+            .content{
+                padding: 30px 20px;
+                font-size: 4.5vw;
+            }
+            .ani .emoji{
+                font-size: 40vw;
+            }
+            .update{ 
+                margin-top: 70px;
+            }
+            .update p{
+                font-size: 3.2vw;
+            }
+            .update span{
+                font-size: 3.3vw;
+            }
+            .showcase img{
+                width: 30%;
+            }
+            .showcase .date{
+                font-size: 3.6vw;
+            }
+            .showcase button {
+                font-size: 1.83vw;
+                width: 18.3vw;
+                height: 3.5vh;
+            }
+            .event .hover-content h2 {
+                font-size: 10.3vw;
+                padding-bottom: 0px;
+            }
+            .event .hover-content .tag{
+                font-size: 3.2vw;
+            }
+            .event .hover-content .ven{
+                font-size: 3.2vw;
+            }
+            .event .text-overlay {
+                font-size: 20vw;
+            }
+            .footer .social a {
+                margin-bottom: 8px;
+            }
+            .h-nav {
+                padding: 0 !important;
+                height: 70px !important;
             }
         }
     </style>
@@ -422,54 +637,56 @@
     </div>
     <div class="content">"Step into the future where the brilliance of technology meets the imperative of sustainability." <br>This year, our premier tech event, Z3NITH is dedicated to exploring cutting-edge innovations that drive sustainable practices. From eco-friendly tech solutions to green energy advancements, discover how technology is shaping our future. Together, let's ignite the spark of innovation and lead the charge towards a sustainable world.
     </div>
-    <div class="events">
+    <div class="eve">
         <div class="bgtxt">
-            Events <br> this <br> year
+                Events <br> this <br> year <br>
         </div>
-        <div class="scrollable-content">
-            <div class="event">
-                <img src="asset/img/1.png" alt="">
-                <div class="text-overlay">1</div>
-                <div class="hover-content">
-                    <h2 style="color: #7D918A;">Uncover</h2>
-                    <p class="tag">Designing a Sustainable Future Pixel-by-Pixel</p>
-                    <p class="ven">Offline - Team of 2 <br> SR. COMPUTER LAB</p>
+        <div class="events">
+            <div class="scrollable-content">
+                <div class="event">
+                    <img src="asset/img/1.png" alt="">
+                    <div class="text-overlay">1</div>
+                    <div class="hover-content">
+                        <h2 style="color: #7D918A;">Uncover</h2>
+                        <p class="tag">Designing a Sustainable Future Pixel-by-Pixel</p>
+                        <p class="ven">Offline - Team of 2 <br> SR. COMPUTER LAB</p>
+                    </div>
                 </div>
-            </div>
-            <div class="event">
-                <img src="asset/img/2.png" alt="">
-                <div class="text-overlay">2</div>
-                <div class="hover-content">
-                    <h2 style="color: #917D7D;">Frame By Frame</h2>
-                    <p class="tag">Crafting Sustainable Narratives</p>
-                    <p class="ven">Submission - Team of 3</p>
+                <div class="event">
+                    <img src="asset/img/2.png" alt="">
+                    <div class="text-overlay">2</div>
+                    <div class="hover-content">
+                        <h2 style="color: #917D7D;">Frame By Frame</h2>
+                        <p class="tag">Crafting Sustainable Narratives</p>
+                        <p class="ven">Submission - Team of 3</p>
+                    </div>
                 </div>
-            </div>
-            <div class="event">
-                <img src="asset/img/3.png" alt="">
-                <div class="text-overlay">3</div>
-                <div class="hover-content">
-                    <h2 style="color: #867D91;">Armageddon</h2>
-                    <p class="tag">You are up for a Tenz-tational showdown</p>
-                    <p class="ven">Online - Team of 5+1</p>
+                <div class="event">
+                    <img src="asset/img/3.png" alt="">
+                    <div class="text-overlay">3</div>
+                    <div class="hover-content">
+                        <h2 style="color: #867D91;">Armageddon</h2>
+                        <p class="tag">You are up for a Tenz-tational showdown</p>
+                        <p class="ven">Online - Team of 5+1</p>
+                    </div>
                 </div>
-            </div>
-            <div class="event">
-                <img src="asset/img/4.png" alt="">
-                <div class="text-overlay">4</div>
-                <div class="hover-content">
-                    <h2 style="color: #86917D;">Keynote</h2>
-                    <p class="tag">Kreation of New Age</p>
-                    <p class="ven">Hybrid - Team of 2 <br> JR. COMPUTER LAB</p>    
+                <div class="event">
+                    <img src="asset/img/4.png" alt="">
+                    <div class="text-overlay">4</div>
+                    <div class="hover-content">
+                        <h2 style="color: #86917D;">Keynote</h2>
+                        <p class="tag">Kreation of New Age</p>
+                        <p class="ven">Hybrid - Team of 2 <br> JR. COMPUTER LAB</p>    
+                    </div>
                 </div>
-            </div>
-            <div class="event">
-                <img src="asset/img/5.png" alt="">
-                <div class="text-overlay">5</div>
-                <div class="hover-content">
-                    <h2 style="color: #86917D;">sp xyz</h2>
-                    <p class="tag">zxy</p>
-                    <p class="ven">y</p>    
+                <div class="event">
+                    <img src="asset/img/5.png" alt="">
+                    <div class="text-overlay">5</div>
+                    <div class="hover-content">
+                        <h2 style="color: #86917D;">sp xyz</h2>
+                        <p class="tag">zxy</p>
+                        <p class="ven">y</p>    
+                    </div>
                 </div>
             </div>
         </div>
@@ -478,7 +695,7 @@
         <div class="slider">
             <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
             <div class="slides">
-                <img src="asset/img/slide1.png" alt="Slide 1">
+                <img src="asset/img/bg.png" alt="Slide 1">
                 <img src="asset/img/slide2.png" alt="Slide 2">
                 <img src="asset/img/slide3.png" alt="Slide 3">
                 <img src="asset/img/slide3.png" alt="Slide 4">
@@ -523,7 +740,7 @@
             <span class="adw">Senior Wing, Air Force Golden Jubilee Institute <br>Subroto Park, New Delhi, Delhi, India - 110010</span>
             <div class="cr">Copyright Futurz Club 2024 &copy;</div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6312729964648!2d77.14778086508149!3d28.580833082438215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b3b69de44b%3A0x95acaea9e5c00f56!2sAir+Force+Golden+Jubilee+Institute!5e0!3m2!1sen!2sin!4v1565083569386!5m2!1sen!2sin" width="300" height="180" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        <iframe class="gloc" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6312729964648!2d77.14778086508149!3d28.580833082438215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b3b69de44b%3A0x95acaea9e5c00f56!2sAir+Force+Golden+Jubilee+Institute!5e0!3m2!1sen!2sin!4v1565083569386!5m2!1sen!2sin" width="300" height="180" frameborder="0" style="border:0" allowfullscreen=""></iframe>
         <img src="asset/img/unnamed (1) (1).png" alt="" id="fcl">
     </div>
     <script>
@@ -538,7 +755,6 @@
                 const aniDiv = document.querySelector('.ani');
                 const aniHeight = aniDiv.offsetHeight;
                 const scrollY = window.scrollY;
-
                 let opacity = 1;
                 if (scrollY > aniHeight) {
                     opacity = 1 - ((scrollY - aniHeight) / aniHeight);
@@ -557,7 +773,7 @@
                 currentEmojiIndex = (currentEmojiIndex + 1) % emojis.length;
             }
             changeEmoji();
-            setInterval(changeEmoji, 3000);
+            setInterval(changeEmoji, 1000);
         });
         let slideIndex = 1;
         showSlides(slideIndex);
