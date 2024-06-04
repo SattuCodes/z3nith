@@ -36,7 +36,7 @@
             color: #48D597;
             text-underline-offset: 5px;
         }
-        #upbutton{
+        .update span{
             color: #48D597;
             font-size: 0.8vw;
         }
@@ -44,13 +44,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 82vh;
+            height: 80.8vh;
             flex-direction: column;
         }
-        .showcase .con img{
-            width: 40%;
+        .showcase img{
+            width: 14%;
         }
-        .showcase .con .date{
+        .showcase .date{
             padding-top: 15px;
             text-transform: uppercase;
             font-family: "Roboto Condensed";
@@ -70,12 +70,6 @@
             height: 22vh;
             margin-left: 40px;
             color: white;
-        }
-        .con{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
         }
         .nav-list{
             margin-right: 51px !important;
@@ -233,7 +227,7 @@
             border: none;
             border-radius: 100px;
             width: 8.3vw;
-            height: 4.9vh;
+            height: 6.9vh;
             margin-bottom: 30px;
             background-color: #ffff;
             color: #404964;
@@ -400,8 +394,9 @@
             }
         }
         @media (max-width: 1366px) and (max-height: 768px) {
-            .showcase .con img {
-                width: 23%;
+            .showcase button{
+                height: 12vh;
+                font-size: 0.8vw;
             }
         }
         @media (max-height: 700px){
@@ -532,7 +527,7 @@
             .footer #fzl{
                 margin-top: 20px;
                 width: 18.4vw;
-                height: 7.3vh;
+                    height: 7.3vh;
                 margin-bottom: 20px;
             }
             .footer #fcl{
@@ -553,7 +548,7 @@
             }
             .event {
                 height: 45vh;
-                width: 70vw;
+                width: 60vw;
             }
             .scrollable-content {
                 padding-left: 630px;
@@ -571,34 +566,26 @@
             }
             .update{ 
                 margin-top: 70px;
-                height: 7.5vh;
             }
             .update p{
-                font-size: 3.3vw;
-                display: flex;
-                flex-direction: column;
-                
+                font-size: 3.2vw;
             }
-            #upbutton{
+            .update span{
                 font-size: 3.3vw;
             }
-            .showcase{
-                height: 85vh;
-            }
-            .showcase .con img{
-                width: 50%;
+            .showcase img{
+                width: 30%;
             }
             .showcase .date{
                 font-size: 3.6vw;
             }
             .showcase button {
-                font-size: 3.5vw;
-                width: 40vw;
-                height: 5vh;
-                font-weight: 600;
+                font-size: 1.83vw;
+                width: 18.3vw;
+                height: 3.5vh;
             }
             .event .hover-content h2 {
-                font-size: 8.3vw;
+                font-size: 10.3vw;
                 padding-bottom: 0px;
             }
             .event .hover-content .tag{
@@ -613,20 +600,12 @@
             .footer .social a {
                 margin-bottom: 8px;
             }
+            .h-nav {
+                padding: 0 !important;
+                height: 70px !important;
+            }
             .arrow{
                 font-size: 19vw;
-            }
-            .showcase{
-                justify-content: space-between;
-            }
-            .vlo{
-                height: 10vh;
-            }
-            .vlt{
-                height: 10vh;
-            }
-            .showcase .con .date{
-                font-size: 6.6vw;
             }
         }
     </style>
@@ -634,21 +613,21 @@
 <body>
     <?php include "navigation.html"?>
     <div class="update">
-        <p><span>The Registrations for Z3NITH'24 are open, &nbsp; &nbsp;</span><span id="upbutton"><a href="">Register Now</a><span> &nbsp;&nbsp;&#10095;</span></span></p>
+        <p>
+            The Registrations for Z3NITH'24 are open, &nbsp; &nbsp;<a href="">Register Now</a><span> &nbsp;&nbsp;&#10095;</span>
+        </p>
     </div>
     <div class="showcase">
         <video autoplay loop muted playsinline poster="asset/img/bg.png" id="bgVideo">
             <source src="asset/img/bg.mp4" type="video/mp4">
         </video>    
         <div class="vlo"></div>
-        <div class="con">
-            <img src="asset/img/with 24 (2).png" alt="Z3NITH 24 logo">
-            <p class="date">
-                26 July 2024
-            </p>
-            <button onclick=dothis()>VIEW TRAILER</button>
-            <button onclick=dothat()>BROCHURE</button>
-        </div>
+        <img src="asset/img/with 24 (2).png" alt="Z3NITH 24 logo">
+        <p class="date">
+            26 July 2024
+        </p>
+        <button onclick=dothis()>VIEW TRAILER</button>
+        <button onclick=dothat()>BROCHURE</button>
         <div class="vlt"></div>
     </div>
     <div class="empty"></div>
