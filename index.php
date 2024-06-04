@@ -604,6 +604,9 @@
                 padding: 0 !important;
                 height: 70px !important;
             }
+            .arrow{
+                font-size: 19vw;
+            }
         }
     </style>
 </head>
@@ -639,7 +642,7 @@
     </div>
     <div class="eve">
         <div class="bgtxt">
-                Events <br> this <br> year <br>
+                Events <br> this <br> year <br><span class="arrow">&#10230;</span>
         </div>
         <div class="events">
             <div class="scrollable-content">
