@@ -410,7 +410,13 @@
                 width: 300px;
             }
         }
-        @media (max-width: 912px) and (max-height: 1368px){
+        @media (max-width: 1024px) and (max-height: 1368px){
+            .update p{
+                font-size: 2.5vw;
+            }
+            #upbutton{
+                font-size: 2.5vw;
+            }
             .slider{
                 width: 100%;
             }
@@ -487,12 +493,28 @@
                 font-size: 25vw;
             }
             .showcase{
-                height: 68vh;
+                height: 90vh;
+                justify-content: space-between;
             }
             .showcase button{
                 font-size: 0.83vw;
                 width: 9.3vw;
                 height: 2.5vh;
+            }
+            .showcase .con img{
+                width: 50%;
+            }
+            .showcase .con .date{
+                font-size: 3.2vw;
+            }
+            .showcase button {
+                font-size: 1.83vw;
+                width: 19.3vw;
+                height: 4.5vh;
+            }
+            .eve{
+                padding-top: 300px;
+                padding-bottom: 300px;
             }
         }
         @media (max-width: 450px) and (max-height: 950px) {
@@ -546,7 +568,7 @@
                 height: 50px !important;
             }
             .dots{
-                padding-bottom: 60px;
+                padding-bottom: 7vh;
             }
             .gloc{
                 order: 0;
@@ -562,9 +584,12 @@
                 height: 140px;
                 width: 300px;
             }
+            .contentcontent{
+                width: 88%;
+            }
             .content{
                 padding: 30px 20px;
-                font-size: 4.5vw;
+                font-size: 5.5vw;
             }
             .ani .emoji{
                 font-size: 40vw;
@@ -628,6 +653,10 @@
             .showcase .con .date{
                 font-size: 6.6vw;
             }
+            .eve{
+                padding-top: 300px;
+                padding-bottom: 300px;
+            }
         }
     </style>
 </head>
@@ -659,7 +688,8 @@
         <div class="emoji" id="emoji-3">🌏</div>
         <div class="emoji" id="emoji-4">🌐</div>
     </div>
-    <div class="content">"Step into the future where the brilliance of technology meets the imperative of sustainability." <br>This year, our premier tech event, Z3NITH is dedicated to exploring cutting-edge innovations that drive sustainable practices. From eco-friendly tech solutions to green energy advancements, discover how technology is shaping our future. Together, let's ignite the spark of innovation and lead the charge towards a sustainable world.
+    <div class="content">
+        <div class="contentcontent"> "Step into the future where the brilliance of technology meets the imperative of sustainability." <br>This year, our premier tech event, Z3NITH is dedicated to exploring cutting-edge innovations that drive sustainable practices. From eco-friendly tech solutions to green energy advancements, discover how technology is shaping our future. Together, let's ignite the spark of innovation and lead the charge towards a sustainable world.</div>
     </div>
     <div class="eve">
         <div class="bgtxt">
@@ -703,13 +733,16 @@
                         <p class="ven">Hybrid - Team of 2 <br> JR. COMPUTER LAB</p>    
                     </div>
                 </div>
-                <div class="event">
+                <div class="event" style="margin-right: 90px">
                     <img src="asset/img/5.png" alt="">
                     <div class="text-overlay">5</div>
                     <div class="hover-content">
                         <h2 style="color: #86917D;">sp xyz</h2>
                         <p class="tag">zxy</p>
                         <p class="ven">y</p>    
+                    </div>
+                </div>
+                <div class="event" style="width: 0.001vw;"> 
                     </div>
                 </div>
             </div>
