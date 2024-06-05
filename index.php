@@ -399,6 +399,21 @@
                 background-position: center;
             }
         }
+        @media (max-width: 1448px) and (max-height: 680px){
+            .event{
+                height: 60vh;
+            }
+            .footer #fcl {
+                padding-right: 50px;
+                height: 13.3vh;
+                width: 12vw;
+            }
+            .footer #fzl {
+                padding-left: 50px;
+                width: 11.4vw;
+                height: 10.3vh;
+            }
+        }
         @media (max-width: 1366px) and (max-height: 768px) {
             .showcase .con img {
                 width: 23%;

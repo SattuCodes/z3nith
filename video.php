@@ -322,8 +322,8 @@
         }
         @media only screen and (max-width: 1440px) and (max-height: 770px) {
             .click img {
-                height: 90px;
-                width: 170px;
+                height: 100px;
+                width: 220px;
             }
             .image {
                 min-height: 293px;
@@ -331,8 +331,8 @@
         }
         @media only screen and (max-width: 1440px) and (max-height: 695px) {
             .click img {
-                height: 182px;
-                width: 255px;
+                height: 80px;
+                width: 178px;
             }
             .image {
                 min-height: 215px;
