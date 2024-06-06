@@ -27,6 +27,7 @@
             font-weight: 300;
             font-style: normal;
             color: white;
+            font-size: 0.9vw;
         }
         .update a{
             font-family: "Lato", sans-serif;
@@ -38,7 +39,7 @@
         }
         #upbutton{
             color: #48D597;
-            font-size: 0.8vw;
+            font-size: 0.9vw;
         }
         .showcase{
             display: flex;
@@ -426,6 +427,9 @@
             }
         }
         @media (max-width: 1024px) and (max-height: 1368px){
+            .update{
+                margin-top: 70px !important;
+            }
             .update p{
                 font-size: 2.5vw;
             }
@@ -533,11 +537,14 @@
             }
         }
         @media (max-width: 450px) and (max-height: 950px) {
+            .footer .social a{
+                text-decoration: none !important;
+            }
             .slides img{
                 object-fit: fill;
             }
             .prev, .next{
-                font-size: 45px;
+                font-size: 45px;    
             }
             .prev{
                 margin-left: 5px;
@@ -767,19 +774,19 @@
         <div class="slider">
             <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
             <div class="slides">
-                <img src="asset/img/bg.png" alt="Slide 1">
-                <img src="asset/img/slide2.png" alt="Slide 2">
-                <img src="asset/img/slide3.png" alt="Slide 3">
+                <img src="asset/img/slide1.png" alt="Slide 2">
+                <img src="asset/img/slide2.png" alt="Slide 3">
                 <img src="asset/img/slide3.png" alt="Slide 4">
-                <img src="asset/img/slide3.png" alt="Slide 5">
-                <img src="asset/img/slide3.png" alt="Slide 6">
-                <img src="asset/img/slide3.png" alt="Slide 7">
-                <img src="asset/img/slide3.png" alt="Slide 8">
-                <img src="asset/img/slide3.png" alt="Slide 9">
-                <img src="asset/img/slide3.png" alt="Slide 10">
-                <img src="asset/img/slide3.png" alt="Slide 11">
-                <img src="asset/img/slide3.png" alt="Slide 12">
-                <img src="asset/img/slide3.png" alt="Slide 13">
+                <img src="asset/img/slide4.png" alt="Slide 5">
+                <img src="asset/img/slide5.png" alt="Slide 6">
+                <img src="asset/img/slide6.png" alt="Slide 7">
+                <img src="asset/img/slide7.png" alt="Slide 8">
+                <img src="asset/img/slide8.png" alt="Slide 9">
+                <img src="asset/img/slide9.png" alt="Slide 10">
+                <img src="asset/img/slide10.png" alt="Slide 11">
+                <img src="asset/img/slide11.png" alt="Slide 12">
+                <img src="asset/img/slide12.png" alt="Slide 13">
+                <img src="asset/img/slide13.png" alt="Slide 1">
             </div>
             <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
@@ -846,6 +853,20 @@
             }
             changeEmoji();
             setInterval(changeEmoji, 1000);
+            function changeImageForMobile() {
+                const imgElement = document.querySelector('.ani img');
+                if (imgElement) {
+                    imgElement.src = 'asset/img/mbg.png';
+                }
+            }
+            const mediaQueryList = window.matchMedia('(max-width: 450px) and (max-height: 950px)');
+            function handleMediaChange(e) {
+                if (e.matches) {
+                    changeImageForMobile();
+                }
+            }
+            handleMediaChange(mediaQueryList);s
+            mediaQueryList.addListener(handleMediaChange);
         });
         let slideIndex = 1;
         showSlides(slideIndex);
@@ -874,6 +895,7 @@
             prev.style.visibility = (slideIndex === 1) ? 'hidden' : 'visible';
             next.style.visibility = (slideIndex === slides.length) ? 'hidden' : 'visible';
         }
+        
     </script>
 
 </body> 
