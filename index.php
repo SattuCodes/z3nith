@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z3NITH'24</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         @import url('https://use.typekit.net/gdz2chs.css');
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        *{
+            overflow-x: clip;
+        }
         #issuenigga{
             font-size: 24px !important;
         }
@@ -326,56 +330,73 @@
         .next {
             right: 0;
         }
-
-        .footer .social a:hover{
-            color: #64729c;
-            transition: color 0.3s;
-        }
         .footer{
             overflow: hidden;
             border-top: 1px solid black;
             display: flex;
-            height: 28vh;
-            width: 98vw;
+            height: 32vh;
+            width: 100vw;
             justify-content: space-between;
             align-items: center;
-            background-color: white;
-        }
-        .footer #fzl{
-            padding-left: 50px;
-            width: 11.4vw;
-            height: 12.3vh;
+            background-color: #1e1e1e;
         }
         .footer .location{
             display: flex;
             flex-direction: column;
-            text-align: right;  
-            font-family: "source-serif-pro";
-            font-weight: 600;
+            text-align: left;  
+            font-family: "Roboto";
+            font-weight: 400;
             align-items: flex-end;
+            color: white;
+            padding-right: 100px;
         }
         .footer .location .cr{
-            font-weight: 400 !important;
+            font-weight: 300 !important;
+            text-align: left;
+            font-size: 0.7vw;
         }
         .footer .social{
             display: flex;
             flex-direction: column;
-            font-family: "source-serif-pro";
-            font-weight: 600;
             text-decoration: none;
             font-size: 1.2vw; 
         }
-        .footer .location .adw{
-            font-size: 1.2vw;
+        .footer .sepration{
+            display: flex;
         }
-        .footer .social a{
+        .footer .sdot {
+            margin: 10px;
+            height: 50px;
+            width: 50px;
+            background-color: #ffff;
+            border-radius: 50%;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+
+        .footer .sdot i {
+            display: flex;
+            align-items: center; 
+            justify-content: center;
             color: black;
-            text-align: left;   
+            font-size: 1.3vw;
+            width: 100%;
+            height: 100%;
         }
-        .footer #fcl {
-            padding-right: 50px;
-            height: 15.3vh;
-            width: 11.4vw;
+        .footer .sepration .sdot a{
+            text-decoration: none;
+        }
+        .footer #zen{
+            font-family: "Lato";
+            font-weight: 300;
+            color: #b4edd5;
+            font-size: 1.8vw;
+            padding-left: 100px;
+        }
+        .footer .location .adw{
+            font-size: 0.9vw;
         }
         #bgVideo{
             position: absolute;
@@ -390,6 +411,15 @@
             position: relative;
             z-index: 1;
         }
+        .footer .sdot i:hover{
+            color: #64729c;
+            transition: color 0.3s;
+        }
+        @media (max-width: 1440px) and (max-height: 900px){
+            .showcase .con img{
+                width: 30%;
+            }
+        }
         @media (max-width: 1250px) {
             #bgVideo{
                 display: none; 
@@ -403,16 +433,6 @@
         @media (max-width: 1448px) and (max-height: 680px){
             .event{
                 height: 60vh;
-            }
-            .footer #fcl {
-                padding-right: 50px;
-                height: 13.3vh;
-                width: 12vw;
-            }
-            .footer #fzl {
-                padding-left: 50px;
-                width: 11.4vw;
-                height: 10.3vh;
             }
         }
         @media (max-width: 1366px) and (max-height: 768px) {
@@ -456,22 +476,21 @@
             .footer{
                 height: 15vh;
             }
-            .footer #fzl {
-                padding-left: 0;
-                width: 10.4vw;
-                height: 5.3vh;
-            }
-            .footer #fcl {
-                padding-right: 0px;
-                height: 8vh;
-                width: 10.4vw;
-            }
             .footer iframe{
-                height: 100px;
-                width: 225px;
+                height: 125px;
+                width: 260px;
             }
             .footer .location .cr{
                 font-size: 1.2vw;
+            }
+            .footer .location .adw{
+                font-size: 1.3vw;
+            }
+            .footer .sepration .sdot i{
+                font-size: 2.3vw;
+            }
+            .footer #zen{
+                font-size: 2.8vw;
             }
             .treasury{
                 height: 60vh;
@@ -557,34 +576,30 @@
                 width: 100vw;
                 flex-direction: column;
             }
-            .footer .social{
-                align-items: center;
-                font-size: 4.5vw;
-                margin-bottom: 20px;
+            .footer #zen{
+                padding: 0;
+                padding-top: 10px;
+                font-size: 8vw;
+            }
+            .footer .social .sdot i{
+                padding-top: 8px;
+                font-size: 5.5vw;
             }
             .footer .location{
-                text-align: center;
-                align-items: center;
-                order: 1;
+                padding: 0;
+                padding-bottom: 20px;
             }
             .footer .location .adw{
                 font-size: 3vw;
+                text-align: center;
+                align-items: center;
+                padding: 0; 
+            }
+            .footer .sdot{
+                flex-direction: column;
             }
             .footer .location .cr{
                 font-size: 2.5vw;
-            }
-            .footer #fzl{
-                margin-top: 20px;
-                width: 18.4vw;
-                height: 7.3vh;
-                margin-bottom: 20px;
-            }
-            .footer #fcl{
-                order: 4;
-                height: 8vh;
-                width: 14.4vw;
-                margin-bottom: 10px;
-                margin-top: 30px;
             }
             .emp{
                 height: 50px !important;
@@ -603,15 +618,15 @@
                 padding-left: 630px;
             }
             .footer iframe {
-                height: 140px;
-                width: 300px;
+                height: 175px;
+                width: 375px;
             }
             .contentcontent{
                 width: 88%;
             }
             .content{
                 padding: 30px 20px;
-                font-size: 5.5vw;
+                font-size: 6vw;
             }
             .ani .emoji{
                 font-size: 40vw;
@@ -725,7 +740,7 @@
                     <div class="hover-content">
                         <h2 style="color: #7D918A;">Uncover</h2>
                         <p class="tag">Designing a Sustainable Future Pixel-by-Pixel</p>
-                        <p class="ven">Offline - Team of 2 <br> SR. COMPUTER LAB</p>
+                        <p class="ven">Offline - Team of 2</p>
                     </div>
                 </div>
                 <div class="event">
@@ -752,7 +767,7 @@
                     <div class="hover-content">
                         <h2 style="color: #86917D;">Keynote</h2>
                         <p class="tag">Kreation of New Age</p>
-                        <p class="ven">Hybrid - Team of 2 <br> JR. COMPUTER LAB</p>    
+                        <p class="ven">Hybrid - Team of 2/p>    
                     </div>
                 </div>
                 <div class="event" style="margin-right: 90px">
@@ -808,19 +823,23 @@
     </div>
     <div class="emp" style="background-color: white; height: 200px;"></div>
     <div class="footer">
-        <img src="asset/img/Z3NITH24BLACK.png" alt="" id=fzl>
+        <span id="zen">Sustain. <br> Thrive. <br> Repeat.</span>
         <div class="social">
-            <a href="">Instagram</a>
-            <a href="">Email</a>
-            <a href="">YouTube</a>
-            <a href="">LinkedIn</a>
+            <div class="sepration">
+                <div class="sdot"><a href="https://www.instagram.com/futurzclub"><i class='bx bxl-instagram'></i></a></div>
+                <div class="sdot"><a href="mailto:futurz.afgji@gmail.com"><i class='bx bxl-gmail' ></i></a></div>
+            </div>
+            <div class="sepration">
+                <div class="sdot"><a href="https://www.youtube.com/@FuturzClubAFGJI"><i class='bx bxl-youtube' ></i></a></div>
+                <div class="sdot"><a href="https://www.linkedin.com/company/futurzclub"><i class='bx bxl-linkedin-square' ></i></a></div>
+            </div>
+            
         </div>
+        <iframe class="gloc" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6312729964648!2d77.14778086508149!3d28.580833082438215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b3b69de44b%3A0x95acaea9e5c00f56!2sAir+Force+Golden+Jubilee+Institute!5e0!3m2!1sen!2sin!4v1565083569386!5m2!1sen!2sin" width="600" height="200" frameborder="0" style="border:0" allowfullscreen=""></iframe>
         <div class="location">
-            <span class="adw">Senior Wing, Air Force Golden Jubilee Institute <br>Subroto Park, New Delhi, Delhi, India - 110010</span>
-            <div class="cr">Copyright Futurz Club 2024 &copy;</div>
+            <span class="adw">Senior Wing <br> Air Force Golden Jubilee Institute, <br>Subroto Park, New Delhi, Delhi, <br>NCT, India - 110010 <br><br><span class="cr">Copyright Futurz Club 2024 &copy;</span></span>
         </div>
-        <iframe class="gloc" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6312729964648!2d77.14778086508149!3d28.580833082438215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b3b69de44b%3A0x95acaea9e5c00f56!2sAir+Force+Golden+Jubilee+Institute!5e0!3m2!1sen!2sin!4v1565083569386!5m2!1sen!2sin" width="300" height="180" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-        <img src="asset/img/unnamed (1) (1).png" alt="" id="fcl">
+        
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -865,7 +884,7 @@
                     changeImageForMobile();
                 }
             }
-            handleMediaChange(mediaQueryList);s
+            handleMediaChange(mediaQueryList);
             mediaQueryList.addListener(handleMediaChange);
         });
         let slideIndex = 1;
@@ -895,8 +914,9 @@
             prev.style.visibility = (slideIndex === 1) ? 'hidden' : 'visible';
             next.style.visibility = (slideIndex === slides.length) ? 'hidden' : 'visible';
         }
-        
+        function dothat() {
+            window.open("https://bit.ly/z3nith24brochure");
+        }
     </script>
-
 </body> 
 </html>

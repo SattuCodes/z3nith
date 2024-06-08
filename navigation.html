@@ -24,86 +24,6 @@
         body {
             transition: background-color 0.3s ease-in-out;
         }
-        @media only screen and (max-width: 1088px) {
-            .nav-container {
-                flex-direction: column;
-                transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-                transform: translateX(-100%);
-                opacity: 1;
-                transform: translateX(0);
-                background-color: #1e1e1e;
-                pointer-events: none;
-            }
-            .nav-container.v-class {
-                opacity: 0;
-                pointer-events: none;
-            }
-            .nav-container:not(.v-class) {
-                pointer-events: auto;
-            }
-            .nav-list li a{
-                color: white !important;
-                font-family: "source-serif-pro", serif !important;
-                font-weight: 500;
-                font-size: 1.6rem !important;
-            }
-            .logo {
-                margin-top: 140px;
-                margin-bottom: 50px;
-                margin-left: 0px !important;
-            }
-            .h-nav {
-                padding: 0 !important;
-                height: 70px !important;
-            }
-            .logo img {
-                width: 100% !important;
-                height: auto !important;
-                max-width: 150px !important;
-            }
-            .nav-list {
-                flex-direction: column;
-                gap: 20px;
-                color: #fff;
-                margin-right: 0px !important;
-            }
-            .navbar {
-                flex-direction: column;
-                padding: 0 0 !important;
-            }
-            .burger {
-                display: block !important;
-            }
-            .burger .line {
-                width: 25px;
-                height: 3px;
-                background-color: black;
-                margin: 5px;
-                transition: background-color 0.3s;
-            }
-            .burger.active{
-                display: none !important;
-            }
-            .cross {
-                display: none;
-            }
-            .cross.active {
-                display: block;
-            }
-            .h-nav {
-                padding: 0 !important;
-                height: 60px;
-            }
-            .v-class {
-                opacity: 0;
-            }
-            .moblogo{
-                display: block !important;
-            }
-            .moblogo.hidden {
-                display: none !important;
-            }
-        }
 
         .navbar {
             background-color: #fff;
@@ -151,8 +71,8 @@
         .cross {
             cursor: pointer;
             position: absolute;
-            right: 6%;
-            top: 13px;
+            right: 5%;
+            top: 16px;
             display: none;
             font-size: 3rem;
             color: rgb(255, 255, 255);
@@ -182,6 +102,89 @@
         }
         .hidden-content > *:not(.navbar) {
             display: none;
+        }
+        @media only screen and (max-width: 1088px) {
+            .nav-container {
+                flex-direction: column;
+                transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                transform: translateX(-100%);
+                opacity: 1;
+                height: 100vh;
+                transform: translateX(0);
+                background-color: #1e1e1e;
+                pointer-events: none;
+                justify-content: center;
+            }
+            .nav-container.v-class {
+                opacity: 0;
+                pointer-events: none;
+            }
+            .nav-container:not(.v-class) {
+                pointer-events: auto;
+            }
+            .nav-list li a{
+                color: white !important;
+                font-family: "source-serif-pro", serif !important;
+                font-weight: 600;
+                font-size: 1.6rem !important;
+            }
+            .logo {
+                margin-top: 0px;
+                margin-bottom: 50px;
+                margin-left: 0px !important;
+            }
+            .h-nav {
+                padding: 0 !important;
+                height: 70px !important;
+            }
+            .logo img {
+                width: 100% !important;
+                height: auto !important;
+                max-width: 150px !important;
+            }
+            .nav-list {
+                flex-direction: column;
+                gap: 5px;
+                color: #fff;
+                margin-right: 0px !important;
+            }
+            .navbar {
+                flex-direction: column;
+                padding: 0 0 !important;
+            }
+            .burger {
+                display: block !important;
+            }
+            .burger .line {
+                width: 25px;
+                height: 3px;
+                background-color: black;
+                margin: 5px;
+                transition: background-color 0.3s;
+            }
+            .burger.active{
+                display: none !important;
+            }
+            .cross {
+                display: none;
+            }
+            .cross.active {
+                display: block;
+            }
+            .h-nav {
+                padding: 0 !important;
+                height: 60px;
+            }
+            .v-class {
+                opacity: 0;
+            }
+            .moblogo{
+                display: block !important;
+            }
+            .moblogo.hidden {
+                display: none !important;
+            }
+            
         }
     </style>
 </head>
