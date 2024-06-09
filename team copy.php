@@ -329,6 +329,27 @@
             margin: 100px 0px;
             color: #484848;
         }
+        .with-lines {
+            position: relative;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .with-lines::before,
+        .with-lines::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 35%;
+            height: 2px;
+            background-color: #1E1E1E;
+        }
+        .with-lines::before {
+            left: 0;
+        }
+        .with-lines::after {
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -356,7 +377,7 @@
             </div>
         </div>
     </div>
-    <h1 id="head">Board of Alumni Advisors</h1>
+    <h1 id="head" class="with-lines">Board of Alumni Advisors</h1>
     <div class="container2">
         <div class="row">
             <div class="profile">
@@ -456,6 +477,7 @@
             </div>
         </div>
     </div>
+    <hr style="width: 100%;border: 2px solid #1e1e1e;margin-bottom: 50px;">
     <script>
     function rearrangeProfiles(containerSelector) {
         const container = document.querySelector(containerSelector);

@@ -53,7 +53,8 @@
             flex-direction: column;
         }
         .showcase .con img{
-            width: 40%;
+            width: 13.3vw;
+            height: 22.8vh;
         }
         .showcase .con .date{
             padding-top: 15px;
@@ -90,18 +91,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f5f5f5;
             position: -webkit-sticky;
             position: sticky;
             top: 0;
             z-index: -1;
             transition: opacity 0.3s;
-        }
-
-        .ani img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            background-image: url('asset/img/bg1.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
         }
         .ani .emoji {
             position: absolute;
@@ -119,11 +117,11 @@
             align-items: center;
             font-family: "Lato";
             font-weight: 700;
-            padding: 80px 60px; 
+            padding: 120px 60px; 
             position: relative; 
             font-size: 3vw;
             z-index: 2; 
-            height: 790px;
+            height: 150vh;
             background-color: #404964;
             color: white;
         }
@@ -160,7 +158,7 @@
         }
         .event{
             height: 65vh;
-            width: 22vw;
+            width: 25vw;
             margin-right: 150px;
             flex: none;
             z-index: 1;
@@ -392,7 +390,7 @@
             font-family: "Lato";
             font-weight: 300;
             color: #b4edd5;
-            font-size: 1.8vw;
+            font-size: 2.5vw;
             padding-left: 100px;
         }
         .footer .location .adw{
@@ -415,29 +413,42 @@
             color: #64729c;
             transition: color 0.3s;
         }
-        @media (max-width: 1440px) and (max-height: 900px){
-            .showcase .con img{
-                width: 30%;
-            }
-        }
         @media (max-width: 1250px) {
             #bgVideo{
                 display: none; 
             }
             .showcase {
-                background-image: url('asset/img/bg.png');
+                background-image: url('asset/img/bgm.png');
                 background-size: cover;
                 background-position: center;
             }
         }
-        @media (max-width: 1448px) and (max-height: 680px){
+        @media (max-width: 1090px) {
+            .update{
+                margin-top: 70px !important;
+            }
+        }
+        @media (max-width: 1448px) and (max-height: 980px){
+            .showcase button{
+                font-size: 0.8vw;
+                width: 11vw;
+                height: 5vh;
+            }
             .event{
                 height: 60vh;
             }
-        }
-        @media (max-width: 1366px) and (max-height: 768px) {
-            .showcase .con img {
-                width: 23%;
+            .location{
+                padding-right: 50px !important;
+            }
+            .sdot{
+                height: 40px !important;
+                width: 40px !important;
+            }
+            .footer .sdot i{
+                font-size: 1.6vw;
+            }
+            .footer #zen{
+                font-size: 2.5vw;
             }
         }
         @media (max-height: 700px){
@@ -540,14 +551,14 @@
                 height: 2.5vh;
             }
             .showcase .con img{
-                width: 50%;
+                width: 33vw;
             }
             .showcase .con .date{
                 font-size: 3.2vw;
             }
             .showcase button {
-                font-size: 1.83vw;
-                width: 19.3vw;
+                font-size: 2.2vw;
+                width: 25.3vw;
                 height: 4.5vh;
             }
             .eve{
@@ -556,6 +567,9 @@
             }
         }
         @media (max-width: 450px) and (max-height: 950px) {
+            .ani{
+                background-image: url('asset/img/mbg.png');
+            }
             .footer .social a{
                 text-decoration: none !important;
             }
@@ -580,14 +594,15 @@
                 padding: 0;
                 padding-top: 10px;
                 font-size: 8vw;
+                text-align: center;
             }
             .footer .social .sdot i{
                 padding-top: 8px;
                 font-size: 5.5vw;
             }
             .footer .location{
-                padding: 0;
-                padding-bottom: 20px;
+                padding: 0 !important;
+                padding-bottom: 20px !important;
             }
             .footer .location .adw{
                 font-size: 3vw;
@@ -648,7 +663,8 @@
                 height: 85vh;
             }
             .showcase .con img{
-                width: 50%;
+                height: 18vh;
+                width: 45.5vw;
             }
             .showcase .date{
                 font-size: 3.6vw;
@@ -719,7 +735,6 @@
     </div>
     <div class="empty"></div>
     <div class="ani" id="ani">
-        <img src="asset/img/bg1.png" alt="">
         <div class="emoji" id="emoji-1">🌎</div>
         <div class="emoji" id="emoji-2">🌍</div>
         <div class="emoji" id="emoji-3">🌏</div>
@@ -789,11 +804,11 @@
         <div class="slider">
             <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
             <div class="slides">
-                <img src="asset/img/slide1.png" alt="Slide 2">
+                <img src="asset/img/s1.png" alt="Slide 2">
                 <img src="asset/img/slide2.png" alt="Slide 3">
                 <img src="asset/img/slide3.png" alt="Slide 4">
                 <img src="asset/img/slide4.png" alt="Slide 5">
-                <img src="asset/img/slide5.png" alt="Slide 6">
+                <img src="asset/img/s5.png" alt="Slide 6">
                 <img src="asset/img/slide6.png" alt="Slide 7">
                 <img src="asset/img/slide7.png" alt="Slide 8">
                 <img src="asset/img/slide8.png" alt="Slide 9">
@@ -872,20 +887,6 @@
             }
             changeEmoji();
             setInterval(changeEmoji, 1000);
-            function changeImageForMobile() {
-                const imgElement = document.querySelector('.ani img');
-                if (imgElement) {
-                    imgElement.src = 'asset/img/mbg.png';
-                }
-            }
-            const mediaQueryList = window.matchMedia('(max-width: 450px) and (max-height: 950px)');
-            function handleMediaChange(e) {
-                if (e.matches) {
-                    changeImageForMobile();
-                }
-            }
-            handleMediaChange(mediaQueryList);
-            mediaQueryList.addListener(handleMediaChange);
         });
         let slideIndex = 1;
         showSlides(slideIndex);
