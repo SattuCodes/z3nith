@@ -429,7 +429,7 @@
                 <p class="des">A patient guy. He clicks chrome just once and waits.</p> 
             </div>
             <div class="profile">
-                <img src="asset/img/babya.png" alt="Profile 1">
+                <img src="asset/img/pookay.png" alt="Profile 1">
                 <h2>Bhavya Dhariwal</h2>
                 <p>Executive - Tech</p>
                 <p class="des">A passionate gamer, art lover, and classical dancer who embraces technology and cherishes tradition. Organized yet clumsy, she brings creativity to everything she does</p> 
