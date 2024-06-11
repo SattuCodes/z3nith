@@ -118,6 +118,37 @@
             text-transform: uppercase;
             color: #484848;
         }
+        #head{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2vw;
+            font-family: "source-serif-pro";
+            font-weight: 700;
+            margin: 100px 0px;
+            color: #484848;
+        }
+        .with-lines {
+            position: relative;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .with-lines::before,
+        .with-lines::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 35%;
+            height: 2px;
+            background-color: #1E1E1E;
+        }
+        .with-lines::before {
+            left: 0;
+        }
+        .with-lines::after {
+            right: 0;
+        }
         @media only screen and (max-width: 1600px){
             .profile {
                 width: 350px;
@@ -253,6 +284,17 @@
             .profile:hover{
                 height: 450px;
             }
+            #head{
+                font-size: 4vw !important;
+            }
+            .with-lines::before, .with-lines::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                width: 20% !important;
+                height: 2px;
+                background-color: #1E1E1E;
+            }
         }
         @media only screen and (max-width: 880px) {
             .txt{
@@ -319,37 +361,8 @@
                 height: 400px
             }
         }
-        #head{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2vw;
-            font-family: "source-serif-pro";
-            font-weight: 700;
-            margin: 100px 0px;
-            color: #484848;
-        }
-        .with-lines {
-            position: relative;
-            text-align: center;
-            margin: 50px 0;
-        }
-
-        .with-lines::before,
-        .with-lines::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 35%;
-            height: 2px;
-            background-color: #1E1E1E;
-        }
-        .with-lines::before {
-            left: 0;
-        }
-        .with-lines::after {
-            right: 0;
-        }
+        
+        
     </style>
 </head>
 <body>
@@ -361,7 +374,7 @@
                 <img src="asset/img/maam.png" alt="Profile 1">
                 <h2>Ms. Mohini Arora</h2>
                 <p>Event Director</p>
-                <p class="des">Des</p> 
+                <p class="des">Mohini Ma'am to us is a teacher, a cosmic force embodying a sense of duty, a disruptive genius, a trendsetter, a trailblazer or to sum it up in a word a mother.</p> 
             </div>
             <div class="profile">
                 <img src="asset/img/prajwal.png" alt="Profile 2">
@@ -414,6 +427,7 @@
             </div>
         </div>
     </div>
+    <hr style="width: 100%;border: 1px solid #1e1e1e;margin-bottom: 50px;">
     <div class="container3">
         <div class="row">
             <div class="profile">
@@ -443,10 +457,10 @@
                     <p class="des">Always sleeping with his playlist on the play right beside him; p.s.-don't try to take away his music and bed from him unless you want him mad :)</p>
                 </div>
                 <div class="profile">
-                    <img src="asset/img/sutta.png" alt="Profile 1">
+                    <img src="asset/img/k.png" alt="Profile 1">
                     <h2>Satyam Tiwari</h2>
                     <p>Website Manager</p>
-                    <p class="des">Des</p> 
+                    <p class="des">idk</p> 
                 </div>
                 <div class="profile">
                     <img src="asset/img/artist.png" alt="Profile 1">
@@ -477,58 +491,58 @@
             </div>
         </div>
     </div>
-    <hr style="width: 100%;border: 2px solid #1e1e1e;margin-bottom: 50px;">
     <script>
-    function rearrangeProfiles(containerSelector) {
-        const container = document.querySelector(containerSelector);
-        const profiles = Array.from(container.querySelectorAll('.profile'));
-        container.innerHTML = '';
-        if (window.matchMedia('(max-width: 880px)').matches) {
-            profiles.forEach(profile => {
-                const newRow = document.createElement('div');
-                newRow.classList.add('row');
-                newRow.appendChild(profile);
-                container.appendChild(newRow);
-            });
-        } else if (window.matchMedia('(max-width: 1045px)').matches) {
-            let newRow;
-            profiles.forEach((profile, index) => {
-                if (index % 2 === 0) {
-                    newRow = document.createElement('div');
+        function rearrangeProfiles(containerSelector) {
+            const container = document.querySelector(containerSelector);
+            const profiles = Array.from(container.querySelectorAll('.profile'));
+            container.innerHTML = '';
+            if (window.matchMedia('(max-width: 880px)').matches) {
+                profiles.forEach(profile => {
+                    const newRow = document.createElement('div');
                     newRow.classList.add('row');
+                    newRow.appendChild(profile);
                     container.appendChild(newRow);
-                }
-                newRow.appendChild(profile);
-            });
-        } else {
-            let newRow;
-            profiles.forEach((profile, index) => {
-                if (index % 3 === 0) {
-                    newRow = document.createElement('div');
-                    newRow.classList.add('row');
-                    container.appendChild(newRow);
-                }
-                newRow.appendChild(profile);
-            });
+                });
+            } else if (window.matchMedia('(max-width: 1045px)').matches) {
+                let newRow;
+                profiles.forEach((profile, index) => {
+                    if (index % 2 === 0) {
+                        newRow = document.createElement('div');
+                        newRow.classList.add('row');
+                        container.appendChild(newRow);
+                    }
+                    newRow.appendChild(profile);
+                });
+            } else {
+                let newRow;
+                profiles.forEach((profile, index) => {
+                    if (index % 3 === 0) {
+                        newRow = document.createElement('div');
+                        newRow.classList.add('row');
+                        container.appendChild(newRow);
+                    }
+                    newRow.appendChild(profile);
+                });
+            }
         }
-    }
 
-    const mediaQuery880 = window.matchMedia('(max-width: 880px)');
-    const mediaQuery1045 = window.matchMedia('(max-width: 1045px)');
+        const mediaQuery880 = window.matchMedia('(max-width: 880px)');
+        const mediaQuery1045 = window.matchMedia('(max-width: 1045px)');
 
-    mediaQuery880.addListener(() => rearrangeProfiles('.container1'));
-    mediaQuery1045.addListener(() => rearrangeProfiles('.container1'));
+        mediaQuery880.addListener(() => rearrangeProfiles('.container1'));
+        mediaQuery1045.addListener(() => rearrangeProfiles('.container1'));
 
-    mediaQuery880.addListener(() => rearrangeProfiles('.container2'));
-    mediaQuery1045.addListener(() => rearrangeProfiles('.container2'));
+        mediaQuery880.addListener(() => rearrangeProfiles('.container2'));
+        mediaQuery1045.addListener(() => rearrangeProfiles('.container2'));
 
-    mediaQuery880.addListener(() => rearrangeProfiles('.container3'));
-    mediaQuery1045.addListener(() => rearrangeProfiles('.container3'));
+        mediaQuery880.addListener(() => rearrangeProfiles('.container3'));
+        mediaQuery1045.addListener(() => rearrangeProfiles('.container3'));
 
-    rearrangeProfiles('.container1');
-    rearrangeProfiles('.container2');
-    rearragneProfiles('.container3');
-</script>
+        rearrangeProfiles('.container1');
+        rearrangeProfiles('.container2');
+        rearrangeProfiles('.container3');
+    </script>
+
 
 
 

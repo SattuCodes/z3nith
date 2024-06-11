@@ -96,10 +96,6 @@
             top: 0;
             z-index: -1;
             transition: opacity 0.3s;
-            background-image: url('asset/img/bg1.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
         }
         .ani .emoji {
             position: absolute;
@@ -142,7 +138,7 @@
             justify-content: center;
         }
         .events{
-            height: 86vh;
+            height: 150vh;
             display: flex;
             align-items: center;
             position: relative;
@@ -332,7 +328,7 @@
             overflow: hidden;
             border-top: 1px solid black;
             display: flex;
-            height: 32vh;
+            height: 40vh;
             width: 100vw;
             justify-content: space-between;
             align-items: center;
@@ -344,7 +340,7 @@
             text-align: left;  
             font-family: "Roboto";
             font-weight: 400;
-            align-items: flex-end;
+            align-items: flex-start;
             color: white;
             padding-right: 100px;
         }
@@ -364,8 +360,8 @@
         }
         .footer .sdot {
             margin: 10px;
-            height: 50px;
-            width: 50px;
+            height: 2.5vw;
+            width: 2.5vw;
             background-color: #ffff;
             border-radius: 50%;
             border: 1px solid black;
@@ -390,11 +386,12 @@
             font-family: "Lato";
             font-weight: 300;
             color: #b4edd5;
-            font-size: 2.5vw;
+            font-size: 2.3vw;
             padding-left: 100px;
         }
         .footer .location .adw{
-            font-size: 0.9vw;
+            font-size: 1vw;
+            margin-bottom: 10px;
         }
         #bgVideo{
             position: absolute;
@@ -422,7 +419,11 @@
                 background-size: cover;
                 background-position: center;
             }
+            .gloc{
+                width: 400px;
+            }
         }
+
         @media (max-width: 1090px) {
             .update{
                 margin-top: 70px !important;
@@ -498,7 +499,7 @@
                 font-size: 1.3vw;
             }
             .footer .sepration .sdot i{
-                font-size: 2.3vw;
+                font-size: 1.8vw;
             }
             .footer #zen{
                 font-size: 2.8vw;
@@ -510,7 +511,7 @@
                 padding-bottom: 90px;
             }
             .events{
-                height: 70vh;
+                height: 113vh;
             }
             .bgtxt{ 
                 left: inherit;
@@ -567,11 +568,11 @@
             }
         }
         @media (max-width: 450px) and (max-height: 950px) {
-            .ani{
-                background-image: url('asset/img/mbg.png');
-            }
             .footer .social a{
                 text-decoration: none !important;
+            }
+            .footer .social{
+                padding-bottom: 30px;
             }
             .slides img{
                 object-fit: fill;
@@ -586,13 +587,13 @@
                 margin-right: 5px;
             }
             .footer{
-                height: 72vh;
+                height: 80vh;
                 width: 100vw;
                 flex-direction: column;
             }
             .footer #zen{
                 padding: 0;
-                padding-top: 10px;
+                padding-top: 40px;
                 font-size: 8vw;
                 text-align: center;
             }
@@ -605,7 +606,7 @@
                 padding-bottom: 20px !important;
             }
             .footer .location .adw{
-                font-size: 3vw;
+                font-size: 3.5vw;
                 text-align: center;
                 align-items: center;
                 padding: 0; 
@@ -614,7 +615,7 @@
                 flex-direction: column;
             }
             .footer .location .cr{
-                font-size: 2.5vw;
+                font-size: 2.9vw;
             }
             .emp{
                 height: 50px !important;
@@ -633,8 +634,8 @@
                 padding-left: 630px;
             }
             .footer iframe {
-                height: 175px;
-                width: 375px;
+                height: 199px;
+                width: 325px;
             }
             .contentcontent{
                 width: 88%;
@@ -782,15 +783,15 @@
                     <div class="hover-content">
                         <h2 style="color: #86917D;">Keynote</h2>
                         <p class="tag">Kreation of New Age</p>
-                        <p class="ven">Hybrid - Team of 2/p>    
+                        <p class="ven">Hybrid - Team of 2</p>    
                     </div>
                 </div>
                 <div class="event" style="margin-right: 90px">
                     <img src="asset/img/5.png" alt="">
                     <div class="text-overlay">5</div>
                     <div class="hover-content">
-                        <h2 style="color: #86917D;">sp xyz</h2>
-                        <p class="tag">zxy</p>
+                        <h2 style="color: #86917D;">Technomania</h2>
+                        <p class="tag">Tech for all</p>
                         <p class="ven">y</p>    
                     </div>
                 </div>
@@ -817,6 +818,7 @@
                 <img src="asset/img/slide11.png" alt="Slide 12">
                 <img src="asset/img/slide12.png" alt="Slide 13">
                 <img src="asset/img/slide13.png" alt="Slide 1">
+                <img src="asset/img/slide14.png" alt="Slide 14">
             </div>
             <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
@@ -834,6 +836,7 @@
             <span class="dot" onclick="currentSlide(11)"></span>
             <span class="dot" onclick="currentSlide(12)"></span>
             <span class="dot" onclick="currentSlide(13)"></span>
+            <span class="dot" onclick="currentSlide(14)"></span>
         </div>
     </div>
     <div class="emp" style="background-color: white; height: 200px;"></div>
@@ -852,7 +855,8 @@
         </div>
         <iframe class="gloc" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6312729964648!2d77.14778086508149!3d28.580833082438215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b3b69de44b%3A0x95acaea9e5c00f56!2sAir+Force+Golden+Jubilee+Institute!5e0!3m2!1sen!2sin!4v1565083569386!5m2!1sen!2sin" width="600" height="200" frameborder="0" style="border:0" allowfullscreen=""></iframe>
         <div class="location">
-            <span class="adw">Senior Wing <br> Air Force Golden Jubilee Institute, <br>Subroto Park, New Delhi, Delhi, <br>NCT, India - 110010 <br><br><span class="cr">Copyright Futurz Club 2024 &copy;</span></span>
+            <span class="adw">Senior Wing <br> Air Force Golden Jubilee Institute, <br>Subroto Park, New Delhi, Delhi, <br>NCT, India - 110010</span>
+            <span class="cr">Copyright Futurz Club 2024 &copy;</span>
         </div>
         
     </div>
@@ -916,7 +920,7 @@
             next.style.visibility = (slideIndex === slides.length) ? 'hidden' : 'visible';
         }
         function dothat() {
-            window.open("https://bit.ly/z3nith24brochure");
+            window.open("https://bit.ly/Z3NITH24Brochure");
         }
     </script>
 </body> 
