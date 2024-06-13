@@ -367,7 +367,24 @@
             .image span{
                 font-size: 18px;
             }
-
+        }
+        @media (min-width: 1311px) and (max-height: 799px) {
+            .click img {
+                height: 180px;
+                width: 260px;
+            }
+            .image {
+                min-height: 254px;
+            }
+        }
+        @media (min-width: 1311px) and (max-height: 700px) {
+            .image {
+                min-height: 200px;
+            }
+            .click img {
+                height: 140px;
+                width: 260px;
+            }
         }
     </style>
 </head>

@@ -347,7 +347,7 @@
         .footer .location .cr{
             font-weight: 300 !important;
             text-align: left;
-            font-size: 0.7vw;
+            font-size: 0.8vw;
         }
         .footer .social{
             display: flex;
@@ -375,7 +375,7 @@
             align-items: center; 
             justify-content: center;
             color: black;
-            font-size: 1.3vw;
+            font-size: 1.1vw;
             width: 100%;
             height: 100%;
         }
@@ -390,7 +390,7 @@
             padding-left: 100px;
         }
         .footer .location .adw{
-            font-size: 1vw;
+            font-size: 1.1vw;
             margin-bottom: 10px;
         }
         #bgVideo{
@@ -604,6 +604,8 @@
             .footer .location{
                 padding: 0 !important;
                 padding-bottom: 20px !important;
+                align-items: center;
+                justify-content: center;
             }
             .footer .location .adw{
                 font-size: 3.5vw;
@@ -642,7 +644,7 @@
             }
             .content{
                 padding: 30px 20px;
-                font-size: 6vw;
+                font-size: 6.2vw;
             }
             .ani .emoji{
                 font-size: 40vw;

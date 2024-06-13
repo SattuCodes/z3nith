@@ -285,13 +285,13 @@
                 height: 450px;
             }
             #head{
-                font-size: 4vw !important;
+                font-size: 5.5vw !important;
             }
             .with-lines::before, .with-lines::after {
                 content: '';
                 position: absolute;
                 top: 50%;
-                width: 20% !important;
+                width: 12% !important;
                 height: 2px;
                 background-color: #1E1E1E;
             }
