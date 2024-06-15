@@ -6,6 +6,10 @@
     <title>Z3NITH'24</title>
     <link rel="icon" type="image/x-icon" href="asset/img/unnamed (1) (1).png">
     <style>
+
+        @import url("https://use.typekit.net/gdz2chs.css");
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
         @import url("https://use.typekit.net/gdz2chs.css");
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -13,10 +17,190 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         body {
             font-family: "Lato", sans-serif;
         }
+        body {
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .navbar {
+            background-color: #fff;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            padding: 10px 20px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            margin: 10px 5px;
+            width: 100%;
+            height: auto;
+            max-width: 100px;
+        }
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-list li a {
+            width: 165px;
+            display: block;
+            text-decoration: none;
+            color: #1e1e1e;
+            font-size: 27px;
+            padding: 10px;
+            font-family: "source-serif-pro", serif !important;
+            font-weight: 500;
+            text-align: center;
+            transition: color 0.5s ease, font-weight 0.5s ease;
+        }
+        .nav-list li a:hover{
+            color: #2E8861;
+            font-weight: 600;
+        }
+        .cross {
+            cursor: pointer;
+            position: absolute;
+            right: 5%;
+            top: 16px;
+            display: none;
+            font-size: 3rem;
+            color: rgb(255, 255, 255);
+        }
+        .burger {
+            cursor: pointer;
+            position: absolute;
+            right: 7%;
+            top: 20px;
+            display: none;
+        }
+        .moblogo{
+            display: none;
+        }
+        .moblogo img{
+            width: 100%;
+            max-width: 62px;
+            position: absolute;
+            top: 11px;
+            left: 10px;
+        }
+        .line {
+            width: 33px;
+            background-color: black;
+            height: 4px;
+            margin: 3px 3px;
+        }
+        .hidden-content > *:not(.navbar) {
+            display: none;
+        }
+        @media only screen and (max-width: 1088px) {
+            .nav-container {
+                flex-direction: column;
+                transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                transform: translateX(-100%);
+                opacity: 1;
+                height: 100vh;
+                transform: translateX(0);
+                background-color: #1e1e1e;
+                pointer-events: none;
+                justify-content: center;
+            }
+            .nav-container.v-class {
+                opacity: 0;
+                pointer-events: none;
+            }
+            .nav-container:not(.v-class) {
+                pointer-events: auto;
+            }
+            .nav-list li a{
+                color: white !important;
+                font-family: "source-serif-pro", serif !important;
+                font-weight: 600;
+                font-size: 1.6rem !important;
+                opacity: .5;
+                transition: opacity 0.3s;
+            }
+            .nav-list li a:hover{
+                opacity: 1;
+            }
+            .logo {
+                margin-top: 0px;
+                margin-bottom: 50px;
+                margin-left: 0px !important;
+            }
+            .h-nav {
+                padding: 0 !important;
+                height: 70px !important;
+            }
+            .logo img {
+                width: 100% !important;
+                height: auto !important;
+                max-width: 150px !important;
+            }
+            .nav-list {
+                flex-direction: column;
+                gap: 5px;
+                color: #fff;
+                margin-right: 0px !important;
+            }
+            .navbar {
+                flex-direction: column;
+                padding: 0 0 !important;
+            }
+            .burger {
+                display: block !important;
+            }
+            .burger .line {
+                width: 25px;
+                height: 3px;
+                background-color: black;
+                margin: 5px;
+                transition: background-color 0.3s;
+            }
+            .burger.active{
+                display: none !important;
+            }
+            .cross {
+                display: none;
+            }
+            .cross.active {
+                display: block;
+            }
+            .h-nav {
+                padding: 0 !important;
+                height: 60px;
+            }
+            .v-class {
+                opacity: 0;
+            }
+            .moblogo{
+                display: block !important;
+            }
+            .moblogo.hidden {
+                display: none !important;
+            }
+            
+        }
+        
         .container1, .container2, .container3{
             position: relative;
             max-width: 1760px;
@@ -366,7 +550,33 @@
     </style>
 </head>
 <body>
-    <?php include 'navigation.html'?>
+    <nav class="navbar h-nav" style="position: fixed; z-index: 999;">
+        <div class="nav-container v-class">
+            <div class="logo" style="margin-left: 68px;">
+                <a href="index.php">
+                    <img src="asset/img/Z3NITH24BLACK.png" alt="logo">
+                </a>
+            </div>
+            <ul class="nav-list v-class" style="margin-right: 67px;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://bit.ly/z3nith_24brochure" target="_blank">Brochure</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="video.html">Videos</a></li>
+                <li><a href="index.html#treasury" id="issuenigga">The Treasury</a></li>
+            </ul>
+        </div>
+        <div class="burger" style="overflow: hidden;">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="cross">
+            <i class='bx bx-x'></i>
+        </div>
+        <div class="moblogo">
+            <a href="index.php"><img src="asset/img/Z3NITH24BLACK.png" alt=""></a>
+        </div>
+    </nav>
     <div class="txt" style="margin-top: 180px;"><h1>Our Team</h1></div>
     <div class="container1" style="margin-top: 200px;">
         <div class="row">
@@ -541,6 +751,61 @@
         rearrangeProfiles('.container1');
         rearrangeProfiles('.container2');
         rearrangeProfiles('.container3');
+        const burger = document.querySelector('.burger');
+        const cross = document.querySelector('.cross');
+        const navContainer = document.querySelector('.nav-container');
+        const navbar = document.querySelector('.navbar');
+        const logoImg = document.querySelector('.logo img');
+        const navlist = document.querySelector('.nav-list');
+        const moblogo = document.querySelector('.moblogo');
+        const body = document.querySelector('body');
+        const newLogoSrc = 'asset/img/Z3NITH24WHITE.png';
+        const originalLogoSrc = 'asset/img/Z3NITH24BLACK.png';
+
+        burger.addEventListener('click', () => {
+            navContainer.classList.toggle('v-class');
+            navbar.classList.toggle('h-nav');
+            navlist.classList.toggle('v-class');
+            burger.classList.toggle('active');
+            cross.classList.toggle('active');
+            moblogo.classList.toggle('hidden');
+            if (navContainer.classList.contains('v-class')) {
+                logoImg.src = originalLogoSrc;
+                body.style.backgroundColor = '#ffffff';
+                navContainer.style.pointerEvents = 'none';
+                body.style.overflowY = 'auto';
+                body.classList.remove('hidden-content'); 
+            } else {
+                logoImg.src = newLogoSrc;
+                body.style.backgroundColor = '#1e1e1e';
+                navContainer.style.pointerEvents = 'auto';
+                body.style.overflowY = 'hidden';
+                body.classList.add('hidden-content');
+            }
+        });
+
+        cross.addEventListener('click', () => {
+            navContainer.classList.toggle('v-class');
+            navbar.classList.toggle('h-nav');
+            navlist.classList.toggle('v-class');
+            burger.classList.toggle('active');
+            cross.classList.toggle('active');
+            moblogo.classList.toggle('hidden');
+
+            if (navContainer.classList.contains('v-class')) {
+                logoImg.src = originalLogoSrc;
+                body.style.backgroundColor = '#ffffff';
+                navContainer.style.pointerEvents = 'none';
+                body.style.overflowY = 'auto';
+                body.classList.remove('hidden-content'); 
+            } else {
+                logoImg.src = newLogoSrc;
+                body.style.backgroundColor = '#1e1e1e';
+                navContainer.style.pointerEvents = 'auto';
+                body.style.overflowY = 'hidden';
+                body.classList.add('hidden-content');
+            }
+        });
     </script>
 
 
