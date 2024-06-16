@@ -601,10 +601,10 @@
     </nav>
     <div class="content">
         <div class="player">
-            <iframe id="videoPlayer" width="1140" height="600" src="https://www.youtube.com/embed/zMDJWq8-JdU"></iframe>
+            <iframe id="videoPlayer" width="1140" height="600" src="https://www.youtube.com/embed/JZFhL2MAwgY"></iframe>
         </div>
         <div class="click">
-            <div class="image">
+            <div class="image" data-video="https://www.youtube.com/embed/JZFhL2MAwgY">
                 <img src="asset/img/z24t.jpg" alt="">
                 <span>Z3NITH'24 | Teaser</span>
             </div>
@@ -659,10 +659,9 @@
         </div>
     </div>
     <script>
-            document.addEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('DOMContentLoaded', () => {
             const images = document.querySelectorAll('.click .image');
             const videoPlayer = document.getElementById('videoPlayer');
-            const emptyImage = document.querySelector('.empty-image');
             let activeImage = null;
 
             const changeVideo = (videoUrl) => {
@@ -689,12 +688,22 @@
             const midScreenQuery = window.matchMedia('(max-width: 1310px) and (min-width: 587px)');
             const smallScreenQuery = window.matchMedia('(max-width: 586px)');
 
-            handleMediaQueryChange(midScreenQuery, 'mid');
-            handleMediaQueryChange(smallScreenQuery, 'small');
+            const handleMediaQueryChange = () => {
+                if (midScreenQuery.matches) {
+                    setupScroll('40%');
+                } else if (smallScreenQuery.matches) {
+                    setupScroll('60%');
+                }
+            };
 
-            midScreenQuery.addListener((e) => handleMediaQueryChange(e, 'mid'));
-            smallScreenQuery.addListener((e) => handleMediaQueryChange(e, 'small'));
+            midScreenQuery.addListener(handleMediaQueryChange);
+            smallScreenQuery.addListener(handleMediaQueryChange);
+
+            // Initial setup
+            handleMediaQueryChange();
         });
+
+        // Burger and cross functionality
         const burger = document.querySelector('.burger');
         const cross = document.querySelector('.cross');
         const navContainer = document.querySelector('.nav-container');
