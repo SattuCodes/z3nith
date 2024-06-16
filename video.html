@@ -604,9 +604,9 @@
             <iframe id="videoPlayer" width="1140" height="600" src="https://www.youtube.com/embed/zMDJWq8-JdU"></iframe>
         </div>
         <div class="click">
-            <div class="image empty-image">
-                <img src="" alt="">
-                <span></span>
+            <div class="image">
+                <img src="asset/img/z24t.jpg" alt="">
+                <span>Z3NITH'24 | Teaser</span>
             </div>
             <div class="image" id="secondImage" data-video="https://www.youtube.com/embed/zMDJWq8-JdU">
                 <img id="sp" src="asset/img/Frame 1 (13).png" alt="">
@@ -680,20 +680,6 @@
                     activeImage = image;
                 });
             });
-
-            const handleMediaQueryChange = (e, queryType) => {
-                if (e.matches) {
-                    if (queryType === 'mid') {
-                        emptyImage.style.display = 'block';
-                        setupScroll('40%');
-                    } else if (queryType === 'small') {
-                        emptyImage.style.display = 'block';
-                        setupScroll('60%');
-                    }
-                } else {
-                    emptyImage.style.display = 'none';
-                }
-            };
 
             const setupScroll = (columnWidth) => {
                 const clickContainer = document.querySelector('.click');
