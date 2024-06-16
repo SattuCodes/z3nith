@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z3NITH'24</title>
     <link rel="icon" type="image/x-icon" href="asset/img/unnamed (1) (1).png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
 
         @import url("https://use.typekit.net/gdz2chs.css");
@@ -18,12 +19,6 @@
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: "Lato", sans-serif;
         }
         body {
             transition: background-color 0.3s ease-in-out;
@@ -699,55 +694,6 @@
         </div>
     </div>
     <script>
-        function rearrangeProfiles(containerSelector) {
-            const container = document.querySelector(containerSelector);
-            const profiles = Array.from(container.querySelectorAll('.profile'));
-            container.innerHTML = '';
-            if (window.matchMedia('(max-width: 880px)').matches) {
-                profiles.forEach(profile => {
-                    const newRow = document.createElement('div');
-                    newRow.classList.add('row');
-                    newRow.appendChild(profile);
-                    container.appendChild(newRow);
-                });
-            } else if (window.matchMedia('(max-width: 1045px)').matches) {
-                let newRow;
-                profiles.forEach((profile, index) => {
-                    if (index % 2 === 0) {
-                        newRow = document.createElement('div');
-                        newRow.classList.add('row');
-                        container.appendChild(newRow);
-                    }
-                    newRow.appendChild(profile);
-                });
-            } else {
-                let newRow;
-                profiles.forEach((profile, index) => {
-                    if (index % 3 === 0) {
-                        newRow = document.createElement('div');
-                        newRow.classList.add('row');
-                        container.appendChild(newRow);
-                    }
-                    newRow.appendChild(profile);
-                });
-            }
-        }
-
-        const mediaQuery880 = window.matchMedia('(max-width: 880px)');
-        const mediaQuery1045 = window.matchMedia('(max-width: 1045px)');
-
-        mediaQuery880.addListener(() => rearrangeProfiles('.container1'));
-        mediaQuery1045.addListener(() => rearrangeProfiles('.container1'));
-
-        mediaQuery880.addListener(() => rearrangeProfiles('.container2'));
-        mediaQuery1045.addListener(() => rearrangeProfiles('.container2'));
-
-        mediaQuery880.addListener(() => rearrangeProfiles('.container3'));
-        mediaQuery1045.addListener(() => rearrangeProfiles('.container3'));
-
-        rearrangeProfiles('.container1');
-        rearrangeProfiles('.container2');
-        rearrangeProfiles('.container3');
         const burger = document.querySelector('.burger');
         const cross = document.querySelector('.cross');
         const navContainer = document.querySelector('.nav-container');
@@ -803,6 +749,55 @@
                 body.classList.add('hidden-content');
             }
         });
+        function rearrangeProfiles(containerSelector) {
+            const container = document.querySelector(containerSelector);
+            const profiles = Array.from(container.querySelectorAll('.profile'));
+            container.innerHTML = '';
+            if (window.matchMedia('(max-width: 880px)').matches) {
+                profiles.forEach(profile => {
+                    const newRow = document.createElement('div');
+                    newRow.classList.add('row');
+                    newRow.appendChild(profile);
+                    container.appendChild(newRow);
+                });
+            } else if (window.matchMedia('(max-width: 1045px)').matches) {
+                let newRow;
+                profiles.forEach((profile, index) => {
+                    if (index % 2 === 0) {
+                        newRow = document.createElement('div');
+                        newRow.classList.add('row');
+                        container.appendChild(newRow);
+                    }
+                    newRow.appendChild(profile);
+                });
+            } else {
+                let newRow;
+                profiles.forEach((profile, index) => {
+                    if (index % 3 === 0) {
+                        newRow = document.createElement('div');
+                        newRow.classList.add('row');
+                        container.appendChild(newRow);
+                    }
+                    newRow.appendChild(profile);
+                });
+            }
+        }
+
+        const mediaQuery880 = window.matchMedia('(max-width: 880px)');
+        const mediaQuery1045 = window.matchMedia('(max-width: 1045px)');
+
+        mediaQuery880.addListener(() => rearrangeProfiles('.container1'));
+        mediaQuery1045.addListener(() => rearrangeProfiles('.container1'));
+
+        mediaQuery880.addListener(() => rearrangeProfiles('.container2'));
+        mediaQuery1045.addListener(() => rearrangeProfiles('.container2'));
+
+        mediaQuery880.addListener(() => rearrangeProfiles('.container3'));
+        mediaQuery1045.addListener(() => rearrangeProfiles('.container3'));
+
+        rearrangeProfiles('.container1');
+        rearrangeProfiles('.container2');
+        rearrangeProfiles('.container3');
     </script>
 
 
