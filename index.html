@@ -332,6 +332,8 @@
             width: 100%;
             padding-left: 500px;
             overflow-y: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: #48D597 #1e1e1e; 
         }
         .event{
             height: 65vh;
@@ -341,6 +343,7 @@
             z-index: 1;
             position: relative;
             transition: height 0.3s;
+            margin-bottom: 50px;
         }
         .event h1{
             color: white;
@@ -419,9 +422,6 @@
             transition: all 0.3s;
             background-color: #404964;
             color: #ffff;
-        }
-        .scrollable-content::-webkit-scrollbar {
-            display: none;
         }
         .treasury{
             height: 86vh;
@@ -624,6 +624,9 @@
             }
             .gloc{
                 width: 400px;
+            }
+            .scrollable-content{
+                scrollbar-width: none !important;
             }
         }
 
@@ -1008,7 +1011,7 @@
         </div>
         <div class="events">
             <div class="scrollable-content">
-                <div class="event">
+                <div class="event" id="eve1">
                     <img src="asset/img/1.png" alt="">
                     <div class="text-overlay">1</div>
                     <div class="hover-content">
@@ -1044,7 +1047,7 @@
                         <p class="ven">Hybrid - Team of 2</p>    
                     </div>
                 </div>
-                <div class="event" style="margin-right: 90px">
+                <div class="event" id="eve5" style="margin-right: 90px">
                     <img src="asset/img/5.png" alt="">
                     <div class="text-overlay">5</div>
                     <div class="hover-content">
