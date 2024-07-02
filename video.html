@@ -607,7 +607,7 @@
             <iframe id="videoPlayer" width="1140" height="600" src="https://www.youtube.com/embed/jK0NAvdVXok"></iframe>
         </div>
         <div class="click">
-            <div class="image" data-video="https://www.youtube.com/embed/jK0NAvdVXok">
+            <div class="image active" data-video="https://www.youtube.com/embed/jK0NAvdVXok">
                 <img src="asset/img/z24.jpg" alt="">
                 <span>Z3NITH'24 | Trailer</span>
             </div>
@@ -669,23 +669,29 @@
         document.addEventListener('DOMContentLoaded', () => {
             const images = document.querySelectorAll('.click .image');
             const videoPlayer = document.getElementById('videoPlayer');
-            let activeImage = null;
+            let activeImage = document.querySelector('.click .image.active');
 
             const changeVideo = (videoUrl) => {
                 videoPlayer.src = videoUrl;
             };
 
+            const handleImageClick = (image) => {
+                const videoUrl = image.getAttribute('data-video');
+                changeVideo(videoUrl);
+                if (activeImage) {
+                    activeImage.classList.remove('active');
+                }
+                image.classList.add('active');
+                activeImage = image;
+            };
             images.forEach(image => {
                 image.addEventListener('click', () => {
-                    const videoUrl = image.getAttribute('data-video');
-                    changeVideo(videoUrl);
-                    if (activeImage) {
-                        activeImage.classList.remove('active');
-                    }
-                    image.classList.add('active');
-                    activeImage = image;
+                    handleImageClick(image);
                 });
             });
+            if (activeImage === null && images.length > 0) {
+                handleImageClick(images[0]);
+            }
 
             const setupScroll = (columnWidth) => {
                 const clickContainer = document.querySelector('.click');
@@ -709,6 +715,7 @@
             // Initial setup
             handleMediaQueryChange();
         });
+
 
         // Burger and cross functionality
         const burger = document.querySelector('.burger');
